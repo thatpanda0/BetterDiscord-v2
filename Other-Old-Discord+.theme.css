@@ -1,0 +1,2192 @@
+/**
+ * @name Fluent Emojis??
+ * @author That Panda
+ * @version 1
+ * @description Test.
+*/
+
+
+.title__85643 {
+  display: none !important;
+}
+
+.visual-refresh .chatContent_f75fb0 {
+  background: #fff !important;
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Light"), url("https://discordstyles.github.io/Fluent/fonts/light.woff2") format("woff2");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Semilight"), url("https://discordstyles.github.io/Fluent/fonts/semilight.woff2") format("woff2");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI"), url("https://discordstyles.github.io/Fluent/fonts/normal.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Semibold"), url("https://discordstyles.github.io/Fluent/fonts/semibold.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Bold"), url("https://discordstyles.github.io/Fluent/fonts/bold.woff2") format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Segoe Fluent Icons";
+  src: local("Segoe Fluent Icons"), url("https://takosthings.github.io/Fluent-Discord-Fonts/Segoe-Fluent-Icons.ttf") format("truetype");
+}
+:root {
+  --font-primary: "Segoe UI Variable Text", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+  --font-code: Consolas, Menlo, Monaco, "Courier New", monospace;
+}
+
+:root {
+  --titlebar-height: 48px;
+  --panel-spacing: 8px;
+  --notices-height: 36px;
+}
+
+
+/* from DiscordStyles/Fluent */
+
+:root {
+  --transition: cubic-bezier(0, 0, 0, 1);
+  --accent-text: #000;
+  --accent-solid: var(--accent);
+  --pill-width: 4px;
+  --pill-height: 16px;
+  --pill-transition: scale 0.15s var(--transition);
+  --btn-radius: 6px;
+  --rounded-high: 8px;
+  --rounded: 4px;
+  --toolbar-height: 64px;
+  --bottombar-height: 64px;
+  --font-weight-light: 300;
+  --font-weight-semilight: 350;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size: 16px;
+  --font-size-md: 18px;
+  --font-size-lg: 20px;
+  --font-size-xl: 28px;
+  --font-size-2xl: 40px;
+  --line-height: 16px;
+  --line-height-md: 20px;
+  --line-height-lg: 24px;
+  --line-height-xl: 28px;
+  --line-height-2xl: 36px;
+  --line-height-3xl: 52px;
+  --font-display: "Segoe UI", sans-serif;
+  --font-primary: "Segoe UI", sans-serif;
+  --shadow-flyout: 0px 8px 16px hsla(0 0% 0% / 0.14);
+  --shadow-dialog: 0px 32px 64px hsla(0 0% 0% / 0.188) 0px 2px 21px hsla(0 0% 0% / 0.147);
+  --cursor: default;
+  --chat-mention-colour: var(--accent);
+  --chat-padding-y: 12px;
+  --chat-padding-x: 16px;
+  --chat-spacing-y: 32px;
+  --chat-spacing-x: 24px;
+  --server-size: 48px;
+  --server-icon-size: 28px;
+  --server-container: calc(var(--server-size) + 16px);
+  --server-hover-selected: inset 0 0 0 100vmax var(--server-bg), inset 1px 0 0 var(--btn-border-x), inset 0 1px 0 var(--btn-border-t),
+  	inset -1px 0 var(--btn-border-x), inset 0 -1px 0 var(--btn-border-b);
+  --server-icon-shape: 50%;
+  --server-folder-icon-shape: 2px;
+  --channel-padding: 8px;
+  --banner-height: 155px;
+  --profile-modal-height: 700px;
+  --profile-modal-width: 800px;
+  --win-btn-height: 32px;
+  --win-btn-width: 52px;
+  --profile-premium-text-shadow: 0 2px 5px hsl(0 0% 0% / 0.75);
+  --discord-pink: 302 calc(var(--saturation-factor, 1) * 100%) 72.5%;
+  --discord-red: 359 calc(var(--saturation-factor, 1) * 82.6%) 59.4%;
+  --discord-grey: 217 8% 34%;
+  --text-normal: var(--text-primary);
+  --text-muted: var(--text-tertiary);
+  --interactive-muted: var(--text-quaternary);
+  --text-link: var(--accent);
+}
+
+.theme-dark,
+html.theme-dark #app-mount .theme-light .root__49fc1 {
+  --background-tertiary: #292d32;
+  --background-secondary: #25292d;
+  --dark-bg-h: var(--dark-background-hue, 0);
+  --dark-bg-s: var(--dark-background-saturation, 0%);
+  --bg-main: hsl(var(--dark-bg-h) var(--dark-bg-s) 13%);
+  --bg-alt: hsl(var(--dark-bg-h) var(--dark-bg-s) 15%);
+  --bg-content: hsl(var(--dark-bg-h) var(--dark-bg-s) 17%);
+  --bg-content-alt: hsl(var(--dark-bg-h) var(--dark-bg-s) 18%);
+  --bg-transparent: hsl(var(--dark-bg-h) var(--dark-bg-s) 40% / 0.25);
+  --bg-transparent-hover: hsl(var(--dark-bg-h) var(--dark-bg-s) 40% / 0.35);
+  --bg-transparent-active: hsl(var(--dark-bg-h) var(--dark-bg-s) 40% / 0.4);
+  --bg-interactive: hsl(var(--dark-bg-h) var(--dark-bg-s) 18%);
+  --bg-interactive-high: hsl(var(--dark-bg-h) var(--dark-bg-s) 20%);
+  --bg-interactive-hover: hsl(var(--dark-bg-h) var(--dark-bg-s) 16%);
+  --bg-interactive-high-hover: hsl(var(--dark-bg-h) var(--dark-bg-s) 18%);
+  --bg-high: hsl(var(--dark-bg-h) var(--dark-bg-s) 20%);
+  --bg-higher: hsl(var(--dark-bg-h) var(--dark-bg-s) 23%);
+  --bg-highest: hsl(var(--dark-bg-h) var(--dark-bg-s) 28%);
+  --bg-menu: hsl(var(--dark-bg-h) var(--dark-bg-s) 17%);
+  --bg-menu-item: hsl(var(--dark-bg-h) var(--dark-bg-s) 22%);
+  --bg-menu-item-hover: hsl(var(--dark-bg-h) var(--dark-bg-s) 20%);
+  --chat-bubble-bg: hsl(var(--dark-bg-h) var(--dark-bg-s) 18%);
+  --chat-mention-bubble: hsl(var(--dark-bg-h) var(--dark-bg-s) 100% / 0.05);
+  --border: hsl(var(--dark-bg-h) var(--dark-bg-s) 11%);
+  --border-mid: hsl(var(--dark-bg-h) var(--dark-bg-s) 20%);
+  --border-high: hsl(var(--dark-bg-h) var(--dark-bg-s) 23%);
+  --pill-unread: hsl(var(--dark-bg-h) var(--dark-bg-s) 60%);
+  --pill-hovered: #fff;
+  --btn-bg: hsl(var(--dark-bg-h) var(--dark-bg-s) 40% / 0.2);
+  --btn-bg-hover: hsl(var(--dark-bg-h) var(--dark-bg-s) 40% / 0.25);
+  --btn-bg-active: hsl(var(--dark-bg-h) var(--dark-bg-s) 40% / 0.1);
+  --btn-border-t: hsl(var(--dark-bg-h) var(--dark-bg-s) 40% / 0.3);
+  --btn-border-x: hsl(var(--dark-bg-h) var(--dark-bg-s) 40% / 0.1);
+  --btn-border-b: hsl(var(--dark-bg-h) var(--dark-bg-s) 40% / 0.1);
+  --btn-border-active: hsl(var(--dark-bg-h) var(--dark-bg-s) 40% / 0.2);
+  --scrollbar-background: hsl(var(--dark-bg-h) var(--dark-bg-s) 50%);
+  --server-bg: hsl(var(--dark-bg-h) var(--dark-bg-s) 50% / 0.2);
+  --folder-bg: var(--server-bg);
+  --textbox-bg: hsl(var(--dark-bg-h) var(--dark-bg-s) 18%);
+  --textbox-bg-high: hsl(var(--dark-bg-h) var(--dark-bg-s) 20%);
+  --textbox-bg-hover: hsl(var(--dark-bg-h) var(--dark-bg-s) 20%);
+  --textbox-bg-high-hover: hsl(var(--dark-bg-h) var(--dark-bg-s) 22%);
+  --textbox-bg-active: hsl(var(--dark-bg-h) var(--dark-bg-s) 13%);
+  --textbox-bg-high-active: hsl(var(--dark-bg-h) var(--dark-bg-s) 16%);
+  --textbox-border: hsl(var(--dark-bg-h) var(--dark-bg-s) 19%);
+  --textbox-underline: hsl(var(--dark-bg-h) var(--dark-bg-s) 60%);
+  --switch-border: hsl(var(--dark-bg-h) var(--dark-bg-s) 94% / 54.42%);
+  --text-primary: hsl(var(--dark-bg-h) var(--dark-bg-s) 90%);
+  --text-secondary: hsl(var(--dark-bg-h) var(--dark-bg-s) 85% / 75%);
+  --text-tertiary: hsl(var(--dark-bg-h) var(--dark-bg-s) 80% / 55%);
+  --text-quaternary: hsl(var(--dark-bg-h) var(--dark-bg-s) 75% / 35%);
+}
+
+.theme-light,
+html.theme-light #app-mount .theme-light .root__49fc1 {
+  --background-tertiary: #f6f6f6 !important;
+  --background-secondary: #fcfcfc !important;
+  --bg-main: #f3f3f3;
+  --bg-alt: #fafafa;
+  --bg-content: #fbfbfb;
+  --bg-content-alt: #f6f6f6;
+  --bg-transparent: hsl(0 0% 40% / 0.25);
+  --bg-transparent-hover: hsl(0 0% 40% / 0.35);
+  --bg-transparent-active: hsl(0 0% 40% / 0.4);
+  --bg-interactive: #eaeaea;
+  --bg-interactive-hover: #ededed;
+  --bg-interactive-high: #eeeeee;
+  --bg-interactive-high-hover: #f1f1f1;
+  --bg-high: #fff;
+  --bg-higher: #fff;
+  --bg-highest: #fff;
+  --bg-menu: #f9f9f9;
+  --bg-menu-item: #f0f0f0;
+  --bg-menu-item-hover: #f3f3f3;
+  --chat-bubble-bg: var(--bg-main);
+  --chat-mention-bubble: hsl(0 0% 0% / 0.05);
+  --border: #e5e5e5;
+  --border-mid: #e8e8e8;
+  --border-high: #ececec;
+  --pill-unread: #9a9a9a;
+  --pill-hovered: #fff;
+  --btn-bg: hsl(0 0% 100%);
+  --btn-bg-hover: hsl(0 0% 0% / 0.005);
+  --btn-bg-active: hsl(0 0% 100% / 0.005);
+  --btn-border-t: hsl(0 0% 0% / 0.06);
+  --btn-border-x: hsl(0 0% 0% / 0.06);
+  --btn-border-b: hsl(0 0% 0% / 0.15);
+  --btn-border-active: hsl(0 0% 0% / 0.15);
+  --scrollbar-background: hsl(0 0% 50%);
+  --server-bg: hsl(0 0% 0% / 0.08);
+  --folder-bg: var(--server-bg);
+  --textbox-bg: #fbfbfb;
+  --textbox-bg-hover: #f6f6f6;
+  --textbox-bg-active: #f6f6f6;
+  --textbox-border: #e5e5e5;
+  --textbox-underline: #868686;
+  --switch-border: hsl(0 0% 0% / 54.42%);
+  --text-primary: hsl(0 0% 0% / 100%);
+  --text-secondary: hsl(0 0% 0% / 75%);
+  --text-tertiary: hsl(0 0% 0% / 55%);
+}
+
+
+
+
+
+#app-mount .container__33507:not(.searchBar__5ec2f),
+#app-mount .container_fea832 {
+  background: var(--textbox-bg-high);
+  border: 1px solid var(--textbox-border);
+  padding: 0;
+  border-radius: var(--rounded);
+  font-size: var(--font-size-sm);
+  box-sizing: border-box;
+  border-bottom-color: var(--textbox-underline);
+  transition: none;
+}
+
+#app-mount .sidebar_c48ade {
+  width: 280px !important;
+  overflow: visible !important;
+}
+
+
+.channel__972a0 {
+  width: 260px !important;
+  overflow: visible !important;
+  max-width: 500px !important;
+}
+
+.link__2ea32 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container__675e5 {
+  display: none !important;
+}
+
+[href='/shop'] {
+  display: none !important;
+}
+
+[href='/store'] {
+  display: none !important;
+}
+
+.link__972a0 {
+  height: 80px;
+}
+
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes settingsIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+/* Do not use. For testing only, to force the app contents to run in centre */
+/*
+}
+.platform-win #app-mount .typeWindows__421ed + div .layer__960e4 {
+  top: 0;
+  padding-top: 0;
+}
+.platform-win #app-mount .typeWindows__421ed + div .layer__960e4.baseLayer__960e4 {
+  padding-top: calc(var(--win-btn-height) + 4px) !important;
+}
+.platform-win #app-mount .typeWindows__421ed + div .standardSidebarView__23e6b {
+  top: 0;
+}
+
+.typeWindows__421ed {
+  height: var(--win-btn-height);
+  z-index: 2;
+  background: transparent;
+  position: fixed;
+  width: calc(100% - 72px - var(--server-size));
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  right: 0;
+}
+
+.winButton__421ed {
+  height: calc(var(--win-btn-height) + 4px);
+  width: var(--win-btn-width);
+  cursor: var(--cursor);
+}
+*/
+.wordmarkWindows__421ed {
+  display: none;
+}
+
+.channelAppLauncher_e6e74f {
+  display: none !important;
+}
+
+[aria-label="Send a gift"] {
+  display: none !important;
+}
+
+.nowPlayingColumn__133bf {
+  display: none !important;
+}
+
+.actions_fc004c {
+  display: none !important;
+}
+
+.peopleListItem_cc6179 {
+  height: 80px !important;
+}
+
+.discoveryIcon_ef3116 {
+  display: none !important;
+}
+
+.footer__214dc {
+  display: none !important;
+}
+
+.tutorialContainer__650eb {
+  display: none !important;
+}
+
+ .thin_d125d2::-webkit-scrollbar,
+ .thin__99f8c::-webkit-scrollbar {
+  width: 6px;
+}
+ .thin_d125d2::-webkit-scrollbar-thumb,
+ .thin__99f8c::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5442);
+}
+
+ .auto_d125d2::-webkit-scrollbar {
+  width: 12px;
+}
+ .auto_d125d2::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+ .auto_d125d2::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5442);
+}
+
+ .scrollbarGhostHairline__506b3::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5442);
+}
+
+ .scrollableContainer__74017::-webkit-scrollbar {
+  width: 6px;
+}
+ .scrollableContainer__74017::-webkit-scrollbar-track,  .scrollableContainer__74017::-webkit-scrollbar-thumb {
+  border-width: 2px;
+}
+ .scrollableContainer__74017::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5442);
+}
+
+.expression-picker-chat-input-button {
+  display: none !important;
+}
+
+.sidebar__23e6b {
+  width: 43vh !important;
+}
+
+
+
+/* Thanks to https://discordstyles.github.io/Fluent/Fluent.css for this */
+/* and also https://takosthings.github.io/Fluent-Discord/Fluent-Discord.css for this */
+/* replace icons */
+
+#app-mount .attachButton__0923f {
+  height: 44px !important;
+  width: 46px !important;
+}
+#app-mount .attachButton__0923f svg {
+  -webkit-mask: url('data:image/svg+xml; utf-8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2Zm0 1.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17ZM12 7a.75.75 0 0 1 .75.75v3.5h3.5a.75.75 0 0 1 0 1.5h-3.5v3.5a.75.75 0 0 1-1.5 0v-3.5h-3.5a.75.75 0 0 1 0-1.5h3.5v-3.5A.75.75 0 0 1 12 7Z" /></svg>') center/cover;
+          mask: url('data:image/svg+xml; utf-8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2Zm0 1.5a8.5 8.5 0 1 0 0 17 8.5 8.5 0 0 0 0-17ZM12 7a.75.75 0 0 1 .75.75v3.5h3.5a.75.75 0 0 1 0 1.5h-3.5v3.5a.75.75 0 0 1-1.5 0v-3.5h-3.5a.75.75 0 0 1 0-1.5h3.5v-3.5A.75.75 0 0 1 12 7Z" /></svg>') center/cover;
+  background: var(--interactive-normal);
+  width: 24px;
+  height: 24px;
+}
+#app-mount .attachButton__0923f path {
+  display: none;
+}
+#app-mount .attachButton__0923f:hover svg {
+  background: var(--interactive-active);
+}
+
+:root {
+  --fluent-icons-color: var(--interactive-normal);
+}
+
+.wrapper__2ea32.modeMuted__2ea32 {
+  --fluent-icons-color: var(--interactive-muted);
+}
+.wrapper__2ea32.modeUnreadImportant__2ea32 {
+  --fluent-icons-color: var(--interactive-active);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html[lang^=en-] .peopleList__5ec2f [aria-label=Message]::before {
+  content: "\e8bd";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .peopleList__5ec2f [aria-label=More]::before {
+  content: "\e712";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .peopleList__5ec2f [aria-label=More] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .peopleList__5ec2f [aria-label=Unblock]::before {
+  content: "\e8f8";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .peopleList__5ec2f [aria-label=Accept]::before {
+  content: "\e8fb";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .peopleList__5ec2f [aria-label=Ignore]::before {
+  content: "\e711";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .peopleList__5ec2f [aria-label=Cancel]::before {
+  content: "\e711";
+  font-family: "Segoe Fluent Icons";
+}
+
+@keyframes fluent-setting-rot {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label=Deafen][aria-checked=true] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label=Deafen][aria-checked=true]::before {
+  content: "\e74f";
+  font-family: "Segoe Fluent Icons";
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label=Deafen][aria-checked=false] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label=Deafen][aria-checked=false]::before {
+  content: "\e767";
+  font-family: "Segoe Fluent Icons";
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label=Mute][aria-checked=true] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label=Mute][aria-checked=true]::before {
+  content: "\ec54";
+  font-family: "Segoe Fluent Icons";
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label=Mute][aria-checked=false] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label=Mute][aria-checked=false]::before {
+  content: "\e720";
+  font-family: "Segoe Fluent Icons";
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label^="User settings" i] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label^="User settings" i]::before {
+  content: "\e713";
+  font-family: "Segoe Fluent Icons";
+  font-size: 20px;
+  margin-left: 20px;
+}
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label^="User settings" i]:hover::before {
+  animation: fluent-setting-rot 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+}
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label="Noise Suppression powered by Krisp" i]::before {
+  content: "\f61f";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label=Disconnect]::before {
+  content: "\e137";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label="Leave Activity"]::before, html[lang^=en-] .panels_c48ade .button__201d5[aria-label="Disconnect Quietly"]::before {
+  content: "\e11f";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label*=Stream]::before, html[lang^=en-] .panels_c48ade .button__201d5[aria-label*="Go Live"]::before, html[lang^=en-] .panels_c48ade .button__201d5[aria-label*="Navigate to a server to start streaming."]::before {
+  content: "\ebc6";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label="Stop Streaming"]::before {
+  content: "\ea14";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .panels_c48ade .button__201d5[aria-label=Stop]::before {
+  content: "\e15b";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .panels_c48ade .actionButtons_e131a9 button.button__201d5[aria-label*=camera i]::before {
+  content: "\e156";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .panels_c48ade .actionButtons_e131a9 button.button__201d5[aria-label*=screen i]::before {
+  content: "\ec15";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .panels_c48ade .actionButtons_e131a9 button.button__201d5[aria-label*=activity i]::before {
+  content: "\ea86";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .panels_c48ade .actionButtons_e131a9 button.button__201d5[aria-label*=soundboard i]::before {
+  content: "\f0ed";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .popover_c97e55 .button_c97e55[aria-label^=Edit]::before {
+  content: "\e70f";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .popover_c97e55 .button_c97e55[aria-label^=Edit] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .popover_c97e55 .button_c97e55[aria-label^=Clear]::before {
+  content: "\e894";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .popover_c97e55 .button_c97e55[aria-label^=Clear] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label*=Camera]::before, html[lang^=en-] .wrapper__1405b .button__201d5[aria-label*="Join Video Call"]::before {
+  content: "\e156";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Share Your Screen"]::before {
+  content: "\ec15";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Stop Streaming"]::before {
+  content: "\ea14";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Turn On Microphone"]::before {
+  content: "\ec54";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Turn Off Microphone"]::before {
+  content: "\e720";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label=Disconnect]::before {
+  content: "\e137";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Stop Watching"]::before {
+  content: "\e191";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Join Call"]::before {
+  content: "\e13a";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label=Dismiss]::before {
+  content: "\e137";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Start An Activity" i]::before {
+  content: "\ea86";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Leave Activity"]::before {
+  content: "\e137";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Hide chat"]::before {
+  content: "\e70d";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Show chat"]::before {
+  content: "\e70d";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Pop Out"]::before {
+  content: "\e17c";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Full Screen"]::before {
+  content: "\e1d9";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label="Exit Full Screen"]::before {
+  content: "\e1d8";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper__1405b .button__201d5[aria-label^=Return]::before {
+  content: "\f71a";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=Reply]::before {
+  content: "\e97a";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=Reply] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=Edit]::before {
+  content: "\e104";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=Edit] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Create Thread"]::before {
+  content: "\e15c";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Create Thread"] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="View Thread"]::before {
+  content: "\e15c";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Mark Unread"]::before {
+  content: "\e119";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Mark Unread"] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Pin Message"]::before {
+  content: "\e141";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Pin Message"] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Unpin Message"]::before {
+  content: "\e196";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Unpin Message"] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Copy Link"]::before {
+  content: "\e167";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Copy Link"] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Copy Message ID"]::before {
+  content: "ID";
+  font-family: var(--font-primary);
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Copy Message ID"] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=Reactions]::before {
+  content: "\e11d";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Add Super Reaction"]::before {
+  content: "\ea38";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=Delete]::before {
+  content: "\e107";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Delete"] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Add Reaction"]::before {
+  content: "\e11d";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Add Reaction"] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=Publish]::before {
+  content: "\e789";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=Published]::before {
+  content: "\e081";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=More]::before {
+  content: "\e10c";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=More] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Spoiler Attachment"]::before {
+  content: "\ed1a";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Modify Attachment"]::before {
+  content: "\e104";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label="Remove Attachment"]::before {
+  content: "\e107";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=Forward]::before {
+  content: "\e72a";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .wrapper_f7ecac .button_f7ecac[aria-label=Forward] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label=Threads]::before {
+  content: "\e8c4";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label=Threads] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label*="Mute channel"][aria-checked=false]::before {
+  content: "\ea8f";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label*="Mute channel"][aria-checked=true]::before {
+  content: "\e7ed";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Pinned messages" i]::before {
+  content: "\e840";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Pinned messages" i] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Hide Member List" i]::before, html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Show Member List" i]::before {
+  content: "\e716";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Hide Member List" i]::before, html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Show Member List" i] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Hide User Profile"]::before, html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Show User Profile"]::before {
+  content: "\e136";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Hide User Profile"]::before, html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Show User Profile"] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label=Inbox]::before {
+  content: "\e715";
+  font-family: "Segoe Fluent Icons";
+}
+
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label=Inbox] svg {
+  display: none !important;
+}
+
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Notification settings" i]::before {
+  content: "\ea8f";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Notification settings" i] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label=More]::before {
+  content: "\e712";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label=More] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label=Close]::before {
+  content: "\e89f";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Update Ready!"]::before {
+  content: "\f83e";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Update Ready!"]::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 19px;
+  left: 32px;
+  background-color: #ff8c00;
+  border-radius: 4px;
+}
+
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label=Help] svg {
+  display: none;
+}
+
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label=Help]::before {
+  content: "\e897";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="New group DM" i]::before {
+  content: "\e902";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="New group DM" i] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Start voice call" i]::before {
+  content: "\e717";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Start voice call" i] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Start video call" i]::before {
+  content: "\e8aa";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Start video call" i] svg {
+  display: none !important;
+}
+
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Add friends to DM" i]::before {
+  content: "\e902";
+  font-family: "Segoe Fluent Icons";
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Add friends to DM" i] svg {
+  display: none !important;
+}
+
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="Join Voice Call" i]::before {
+  content: "\e77e";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .toolbar__9293f .iconWrapper__9293f[aria-label="tage Settings" i]::before {
+  content: "\e115";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .toolbar__9293f .eventsButton__32f49[aria-label="Create & View Events" i]::before {
+  content: "\e163";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .toolbar__9293f .button__201d5[aria-label=Invite]::before {
+  content: "\e1e2";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .toolbar__9293f .button__201d5[aria-label=Focus]::before, html[lang^=en-] .toolbar__9293f .button__201d5[aria-label=Grid]::before {
+  content: "\eca5";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .toolbar__9293f .button__201d5[aria-label=More]::before {
+  content: "\e712";
+  font-family: "Segoe Fluent Icons";
+}
+html[lang^=en-] .toolbar__9293f .button__201d5[aria-label^="Show Chat"]::before {
+  content: "\e8a0";
+  font-family: "Segoe Fluent Icons";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-My_Account]::before {
+  content: "\e77b";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Profile_Customization]::before {
+  content: "\e7ee";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Privacy___Safety]::before {
+  content: "\ea18";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Authorized_Apps]::before {
+  content: "\e8d7";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Sessions]::before {
+  content: "\e772";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Connections]::before {
+  content: "\f0b9";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Friend_Requests]::before {
+  content: "\e1e2";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Discord_Nitro]::before {
+  content: "N";
+  font-family: var(--font-primary);
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Nitro_Server_Boost]::before {
+  content: "\ec4a";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Subscriptions]::before {
+  content: "\ed0e";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Library_Inventory]::before {
+  content: "\f133";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Billing]::before {
+  content: "\e8c7";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Appearance]::before {
+  content: "\e771";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Accessibility]::before {
+  content: "\e776";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Voice___Video]::before {
+  content: "\e720";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Text___Images]::before {
+  content: "\ea69";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Notifications]::before {
+  content: "\e91c";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Keybinds]::before {
+  content: "\e765";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Language]::before {
+  content: "\f2b7";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Windows]::before {
+  content: "\e782";
+  font-family: "HoloLens MDL2 Assets";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Streamer_Mode]::before {
+  content: "\e93e";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Advanced]::before {
+  content: "\e7be";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Activity_Privacy]::before {
+  content: "\e72e";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Game_Activity]::before {
+  content: "\e7fc";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Overlay]::before {
+  content: "\e9a6";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-changelog]::before {
+  content: "\e77c";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Hypesquad_Online]::before {
+  content: "\f157";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Experiments]::before {
+  content: "\e9ca";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-settings-cog-Developer_Options]::before {
+  content: "\ec7a";
+  font-family: "Segoe Fluent Icons";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-user-profile]::before {
+  content: "\e77b";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-mention]::before {
+  content: "@";
+  font-family: var(--font-primary);
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-change-nickname]::before {
+  content: "\e136";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-apps]::before {
+  content: "\e74c";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-message-user]::before {
+  content: "\e15f";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-call]::before {
+  content: "\e13a";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-note]::before {
+  content: "\e70b";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-invite-to-listen]::before {
+  content: "\f623";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-mute]::before {
+  content: "\e198";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-disable-video]::before {
+  content: "\ea14";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-invite-to-server]::before {
+  content: "\e109";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-remove-friend]::before {
+  content: "\e107";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-block]::before {
+  content: "\e1e0";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-voice-mute]::before {
+  content: "\ec54";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-voice-deafen]::before {
+  content: "\e198";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-voice-disconnect]::before {
+  content: "\e137";
+  font-family: "Segoe Fluent Icons";
+}
+
+.menu_c1e9c4 .item_c1e9c4[id=user-context-voice-disconnect] svg {
+  display: none !important;
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-timeout]::before {
+  content: "\e916";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-kick]::before {
+  content: "\f140";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-mod-view]::before {
+  content: "\e890";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-ban]::before {
+  content: "\f140";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-roles]::before {
+  content: "\ec1b";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id^=user-context-devmode-copy-id]::before {
+  content: "\e943";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-voice-move]::before {
+  content: "\e759";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-deafen]::before {
+  content: "\e198";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-add-friend]::before {
+  content: "\e1e2";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-close-dm]::before {
+  content: "\e8bb";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-mark-channel-read]::before {
+  content: "\e166";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-mute-channel]::before {
+  content: "\ee79";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-soundboard-sound-mute]::before {
+  content: "\f0eb";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-add-friend-nickname]::before {
+  content: "\e1cb";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id^=user-context-spotify-play-]::before {
+  content: "\e102";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id^=user-context-spotify-sync-]::before {
+  content: "\e189";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-ring]::before {
+  content: "\e9ce";
+  visibility: hidden;
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-stop-ringing]::before {
+  content: "\e9ce";
+  visibility: hidden;
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-remove]::before {
+  content: "\e108";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=user-context-manage-integration]::before {
+  content: "\e774";
+  font-family: "Segoe Fluent Icons";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-premium-subscribe]::before {
+  content: "\ec4a";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-invite-people]::before {
+  content: "\e1e2";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-invite-guest]::before {
+  content: "\ee57";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-settings]::before {
+  content: "\e115";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-insights]::before {
+  content: "\e9d2";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-create-channel]::before {
+  content: "\e15f";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-create-category]::before {
+  content: "\e169";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-create-event]::before {
+  content: "\e163";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-active-threads]::before {
+  content: "\e15c";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-application-directory]::before {
+  content: "\e99a";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-guild-connection-roles]::before {
+  content: "\e71b";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-notifications]::before {
+  content: "\e91c";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-privacy]::before {
+  content: "\e72e";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-change-nickname]::before {
+  content: "\e13e";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-hide-muted-channels]::before {
+  content: "\ed1a";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-report-raid]::before {
+  content: "\e1de";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-header-popout-leave]::before {
+  content: "\f3b1";
+  font-family: "Segoe Fluent Icons";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-mark-channel-read]::before {
+  content: "\e166";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-mute-channel]::before {
+  content: "\ee79";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-unmute-channel]::before {
+  content: "\ee79";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-channel-notifications]::before {
+  content: "\e91c";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-channel-copy-link]::before {
+  content: "\e167";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-delete-channel]::before {
+  content: "\e107";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id^=channel-context-devmode-copy-id]::before {
+  content: "\e943";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-hide-voice-names]::before {
+  content: "\e16a";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-collapse-category]::before {
+  content: "\e16a";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-collapse-all-categories]::before {
+  content: "\f168";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-invite-people]::before {
+  content: "\e1e2";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-invite-to-listen]::before {
+  content: "\f623";
+}
+
+.menu_c1e9c4 .item_c1e9c4[id=channel-context-edit-channel]::before {
+  content: "\e104";
+  font-family: "Segoe Fluent Icons";
+}
+
+.menu_c1e9c4 .item_c1e9c4[id=channel-context-edit-channel] svg {
+  display: none !important;
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-clone-channel]::before {
+  content: "\e16f";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-create-text-channel]::before {
+  content: "\e109";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-create-voice-channel]::before {
+  content: "\e109";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-open-chat]::before {
+  content: "\e8f2";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-context-copy-channel-topic]::before {
+  content: "\e16f";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=gdm-context-mark-channel-read]::before {
+  content: "\e166";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=gdm-context-instant-invites]::before {
+  content: "\e1e2";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=gdm-context-mute-channel]::before {
+  content: "\ee79";
+}
+ .menu_c1e9c4 .item_c1e9c4[id^=gdm-context-devmode-copy-id]::before {
+  content: "\e943";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=gdm-context-leave-channel]::before {
+  content: "\f3b1";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-mark-guild-read]::before {
+  content: "\e166";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-invite-people]::before {
+  content: "\e1e2";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-mute-guild]::before {
+  content: "\ee79";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-notifications]::before {
+  content: "\e91c";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-hide-muted-channels]::before {
+  content: "\ed1a";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings]::before {
+  content: "\e115";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-privacy]::before {
+  content: "\e72e";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-change-nickname]::before {
+  content: "\e136";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-create-channel]::before {
+  content: "\e109";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-create-category]::before {
+  content: "\e109";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-create-event]::before {
+  content: "\e163";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-report-raid]::before {
+  content: "\e1de";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-leave-guild]::before {
+  content: "\f3b1";
+}
+ .menu_c1e9c4 .item_c1e9c4[id^=guild-context-devmode-copy-id]::before {
+  content: "\e943";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-mark-folder-read]::before {
+  content: "\e166";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-folder-settings]::before {
+  content: "\e8b7";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-folder-collapse]::before {
+  content: "\ed41";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--OVERVIEW]::before {
+  content: "\f246";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--ROLES]::before {
+  content: "\ec1b";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--EMOJI]::before {
+  content: "\ed54";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--STICKERS]::before {
+  content: "\f4aa";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--MODERATION]::before {
+  content: "\ec81";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--GUILD_AUTOMOD]::before {
+  content: "\e7ba";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--AUDIT_LOG]::before {
+  content: "\e9d5";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--INTEGRATIONS]::before {
+  content: "\e774";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--WIDGET]::before {
+  content: "\ea86";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--GUILD_TEMPLATES]::before {
+  content: "\e8c8";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--VANITY_URL]::before {
+  content: "\e167";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--COMMUNITY]::before {
+  content: "\e902";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--ANALYTICS]::before {
+  content: "\e9d2";
+  font-family: "Segoe Fluent Icons"
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--PARTNER]::before {
+  content: "\e902";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--DISCOVERY]::before {
+  content: "\e707";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--MEMBER_VERIFICATION]::before {
+  content: "\e73e";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--COMMUNITY_WELCOME]::before {
+  content: "\ebfc";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--GUILD_PREMIUM]::before {
+  content: "\ec4a";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--MEMBERS]::before {
+  content: "\e716";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--INSTANT_INVITES]::before {
+  content: "\e8fa";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=guild-context-guild-settings--BANS]::before {
+  content: "\e8f8";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=message-add-reaction]::before {
+  content: "\e9ce";
+  visibility: hidden;
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-reactions]::before {
+  content: "\e11d";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-favorite]::before {
+  content: "\e113";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-unfavorite]::before {
+  content: "\e195";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-edit]::before {
+  content: "\e104";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-pin]::before {
+  content: "\e141";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-unpin]::before {
+  content: "\e196";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-reply]::before {
+  content: "\e97a";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-thread]::before {
+  content: "\e15c";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-apps]::before {
+  content: "\e74c";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-mark-unread]::before {
+  content: "\e119";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-copy-link]::before {
+  content: "\e167";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-tts]::before {
+  content: "\efa9";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-delete]::before {
+  content: "\e107";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-copy]::before {
+  content: "\e16f";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-copy-text]::before {
+  content: "\e16f";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-copy-image]::before {
+  content: "\e16f";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-save-image]::before {
+  content: "\e159";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-copy-native-link]::before {
+  content: "\e167";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-open-native-link]::before {
+  content: "\e8a7";
+}
+ .menu_c1e9c4 .item_c1e9c4[id^=message-devmode-copy-id]::before {
+  content: "\e943";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-search-google]::before {
+  content: "\f6fa";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-guild-automod-add-selection]::before {
+  content: "\e16e";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-report]::before {
+  content: "\e730";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-forward]::before {
+  content: "\e72a";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-add-reaction-0]::before {
+  content: "\e9ce";
+  visibility: hidden;
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-add-reaction-1]::before {
+  content: "\e9ce";
+  visibility: hidden;
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-edit]::before {
+  content: "\e104";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-pin]::before {
+  content: "\e141";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-reply]::before {
+  content: "\e97a";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-thread]::before {
+  content: "\e15c";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-apps]::before {
+  content: "\e74c";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-mark-unread]::before {
+  content: "\e119";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-reactions]::before {
+  content: "\e11d";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-copy-link]::before {
+  content: "\e167";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-tts]::before {
+  content: "\efa9";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-delete]::before {
+  content: "\e107";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=message-actions-report]::before {
+  content: "\e730";
+}
+ .menu_c1e9c4 .item_c1e9c4[id^=message-actions-devmode-copy-id]::before {
+  content: "\e943";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-join-thread]::before {
+  content: "\e13f";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-open]::before {
+  content: "\e7ea";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-leave-thread]::before {
+  content: "\e11f";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-mark-channel-read]::before {
+  content: "\e166";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-channel-copy-link]::before {
+  content: "\e167";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-mute-channel]::before {
+  content: "\ee79";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-thread-notifications]::before {
+  content: "\e91c";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-edit-thread]::before {
+  content: "\e104";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-search]::before {
+  content: "\e721";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-pins]::before {
+  content: "\e141";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-auto-archive-thread]::before {
+  content: "\e1d3";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-unarchive-thread]::before {
+  content: "\e1d3";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=thread-context-delete-channel]::before {
+  content: "\e107";
+}
+ .menu_c1e9c4 .item_c1e9c4[id^=thread-context-devmode-copy-id]::before {
+  content: "\e943";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=textarea-context-suggestions]::before {
+  content: "\e1ce";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=textarea-context-submit-button]::before {
+  content: "\e122";
+}
+ .menu_c1e9c4 .item_c1e9c4[id^=textarea-context-correction-]::before {
+  content: "\e9ce";
+  visibility: hidden;
+}
+ .menu_c1e9c4 .item_c1e9c4[id=textarea-context-add-to-dictionary]::before {
+  content: "\e82d";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=textarea-context-spellcheck]::before {
+  content: "\f87b";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=textarea-context-languages]::before {
+  content: "\f2b7";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=textarea-context-copy]::before {
+  content: "\e16f";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=textarea-context-cut]::before {
+  content: "\e16b";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=textarea-context-paste]::before {
+  content: "\e16d";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=channel-attach-upload-file]::before {
+  content: "\e11c";
+  font-family: "Segoe Fluent Icons";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=channel-attach-upload-file] svg {
+  display: none !important;
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=channel-attach-poll]::before {
+  content: "\e133";
+  font-family: "Segoe Fluent Icons";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=channel-attach-poll] svg {
+  display: none !important;
+}
+
+
+ .menu_c1e9c4 .item_c1e9c4[id=channel-attach-THREAD]::before {
+  content: "\e15c";
+  font-family: "Segoe Fluent Icons";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=channel-attach-THREAD] svg {
+  display: none !important;
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=channel-attach-SLASH_COMMAND]::before {
+  content: "\e756";
+  font-family: "Segoe Fluent Icons";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=channel-attach-listen]::before {
+  content: "\e102";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=rtc-channel-VOICE_ACTIVITY]::before {
+  content: "\f12e";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=rtc-channel-PUSH_TO_TALK]::before {
+  content: "\f093";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=rtc-channel-popout-call]::before {
+  content: "\e17c";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=rtc-channel-show-voice-states]::before {
+  content: "\e976";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=audio-device-context-VOICE_ACTIVITY]::before {
+  content: "\f12e";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=audio-device-context-PUSH_TO_TALK]::before {
+  content: "\f093";
+}
+
+ .menu_c1e9c4 .item_c1e9c4[id=account-status-picker]::before {
+  content: "\f136";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=account-set-custom-status]::before {
+  content: "\e13e";
+}
+ .menu_c1e9c4 .item_c1e9c4[id=account-switch-account]::before {
+  content: "\e748";
+}
+
+@keyframes fluent-loading-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fluent-loading-circle-progress-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(220deg);
+  }
+}
+@keyframes fluent-loading-circle-progress-2 {
+  0% {
+    transform: rotate(-140deg);
+  }
+  50% {
+    transform: rotate(-160deg);
+  }
+  100% {
+    transform: rotate(140deg);
+  }
+}
+.spinner__0b5bb .inner__0b5bb:not(.pulsingEllipsis__0b5bb) {
+  display: block;
+  animation: fluent-loading-circle 1s linear infinite;
+}
+.spinner__0b5bb .inner__0b5bb:not(.pulsingEllipsis__0b5bb) .item__0b5bb:first-child {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  background-color: transparent;
+  clip: rect(0, 32px, 32px, 16px);
+  animation: fluent-loading-circle-progress-1 2s linear infinite;
+}
+.spinner__0b5bb .inner__0b5bb:not(.pulsingEllipsis__0b5bb) .item__0b5bb:first-child::after {
+  content: "";
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  top: 0;
+  left: 0;
+  clip: rect(0, 32px, 32px, 16px);
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  animation: fluent-loading-circle-progress-2 2s linear infinite;
+  box-sizing: border-box;
+}
+.spinner__0b5bb .inner__0b5bb:not(.pulsingEllipsis__0b5bb) .item__0b5bb:last-child {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* profile area */
+
+
+.theme-light .container__37e49 {
+  background: var(--bg-overlay-2, --background-secondary-alt) !important;
+}
+
+.panels_c48ade {
+  background-color: transparent !important;
+}
+
+/* other tests */
+/*
+#app-mount .layer__960e4 {
+  background: var(--bg-main);
+}
+*/
+#app-mount .layer__960e4 .toolsContainer__23e6b {
+  margin: 0;
+  padding: 0;
+  flex: none;
+  width: auto;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+  width: auto;
+  -webkit-user-drag: none;
+  -webkit-app-region: none;
+}
+#app-mount .layer__960e4 .tools__23e6b {
+  position: static;
+}
+#app-mount .layer__960e4 .container_c2b141 {
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+#app-mount .layer__960e4 .closeButton_c2b141 {
+  border-radius: var(--btn-radius);
+  width: 42px;
+  flex: 0 0 42px;
+  border: none;
+  cursor: var(--cursor);
+}
+#app-mount .layer__960e4 .closeButton_c2b141 svg {
+  -webkit-mask: url('data:image/svg+xml; utf-8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10.733 19.79a.75.75 0 0 0 1.034-1.086L5.516 12.75H20.25a.75.75 0 0 0 0-1.5H5.516l6.251-5.955a.75.75 0 0 0-1.034-1.086l-7.42 7.067a.995.995 0 0 0-.3.58.754.754 0 0 0 .001.289.995.995 0 0 0 .3.579l7.419 7.067Z" /></svg>') center/cover;
+          mask: url('data:image/svg+xml; utf-8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10.733 19.79a.75.75 0 0 0 1.034-1.086L5.516 12.75H20.25a.75.75 0 0 0 0-1.5H5.516l6.251-5.955a.75.75 0 0 0-1.034-1.086l-7.42 7.067a.995.995 0 0 0-.3.58.754.754 0 0 0 .001.289.995.995 0 0 0 .3.579l7.419 7.067Z" /></svg>') center/cover;
+  width: 16px;
+  height: 16px;
+  background: var(--text-primary);
+}
+#app-mount .layer__960e4 .closeButton_c2b141 path {
+  display: none;
+}
+#app-mount .layer__960e4 .closeButton_c2b141:hover {
+  background: var(--btn-bg-hover);
+}
+#app-mount .layer__960e4 .closeButton_c2b141:active {
+  background: var(--btn-bg-active);
+  transform: none;
+}
+#app-mount .layer__960e4 .keybind_c2b141 {
+  margin-top: 0;
+  font-size: 0;
+  color: var(--text-primary);
+}
+#app-mount .layer__960e4 .keybind_c2b141::before {
+  content: "Settings";
+  font-size: var(--font-size-xs);
+  display: block;
+}
+#app-mount .layer__960e4 ~ .layer__960e4 .standardSidebarView__23e6b {
+  background: var(--bg-main);
+  z-index: 1;
+}
+#app-mount .layer__960e4 ~ .layer__960e4 .sidebarRegion__23e6b {
+  flex: 0;
+  margin-top: 46px;
+}
+
+#app-mount .layer__960e4 ~ .layer__960e4 .sidebarRegionScroller__23e6b {
+  background: var(--bg-main);
+}
+
+#app-mount .layer__960e4 ~ .layer__960e4 .sidebar__23e6b {
+  width: 270px;
+  padding: 0 16px 16px;
+}
+#app-mount .layer__960e4 ~ .layer__960e4 .sidebar__23e6b .item_b3f026 {
+  font-size: var(--font-size-sm);
+  border-radius: var(--rounded);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  cursor: var(--cursor);
+}
+#app-mount .layer__960e4 ~ .layer__960e4 .sidebar__23e6b .item_b3f026:not(:last-child) {
+  margin-bottom: 4px;
+}
+#app-mount .layer__960e4 ~ .layer__960e4 .sidebar__23e6b .item_b3f026 svg {
+  display: none;
+}
+#app-mount .layer__960e4 ~ .layer__960e4 .sidebar__23e6b .item_b3f026 .selectedBackground-1qyzak {
+  background: var(--accent);
+}
+#app-mount .layer__960e4 ~ .layer__960e4 .sidebar__23e6b .item_b3f026::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 4px;
+  border-radius: 4px;
+  background: var(--accent);
+  opacity: 0;
+  transition: 0.15s var(--transition);
+}
+
+
+
+#app-mount .container_b962dc {
+  width: 748px !important;
+}
+#app-mount .guildSidebar_b962dc {
+  background: var(--bg-alt);
+  border-right: 1px solid var(--border-high);
+}
+#app-mount .modal_b962dc {
+  background: transparent;
+}
+#app-mount .formFieldWrapper-2LV3S6 {
+  background: var(--bg-alt);
+  border: 1px solid var(--border-high);
+  border-radius: var(--rounded);
+}
+
+#app-mount .container-1Lk8p7 {
+  width: 100%;
+}
+#app-mount .container-1Lk8p7 > div, #app-mount .container-1Lk8p7 > div > div {
+  width: 100% !important;
+}
+#app-mount .container-1Lk8p7 [class*=subtitle_],
+#app-mount .container-1Lk8p7 .title-1_TkpU {
+  text-align: left;
+}
+#app-mount .container-1Lk8p7 .header-1zd7se {
+  align-items: flex-start !important;
+}
+#app-mount .container-1Lk8p7 .heading-xl-medium-_XBxHT {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+#app-mount .container-1Lk8p7 [class*=subtitle_] {
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-sm);
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  margin-top: 0;
+  color: var(--text-secondary) !important;
+}
+#app-mount .container-1Lk8p7 .content-2hZxGK {
+  margin-top: 0;
+  flex-direction: column !important;
+}
+#app-mount .container-1Lk8p7 .container-x8Y1ix {
+  border-radius: var(--btn-radius);
+  padding: 4px 10px;
+  line-height: 20px;
+  font-size: var(--font-size-sm);
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  background: var(--btn-bg);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-primary);
+  box-shadow: none !important;
+  border: 1px solid var(--btn-border-x);
+  border-top-color: var(--btn-border-t);
+  border-bottom-color: var(--btn-border-b);
+  cursor: var(--cursor);
+}
+#app-mount .container-1Lk8p7 .container-x8Y1ix:hover {
+  background: var(--btn-bg-hover);
+  border-color: var(--btn-border-t) var(--btn-border-x) var(--btn-border-b);
+}
+#app-mount .container-1Lk8p7 .container-x8Y1ix:active {
+  background: var(--btn-bg-active) !important;
+  border-color: var(--btn-border-active);
+}
+#app-mount .container-1Lk8p7 .container-x8Y1ix .icon-AynerZ {
+  margin: 0 10px 0 0;
+}
+#app-mount .container-1Lk8p7 .container-x8Y1ix .text-md-normal-304U3g {
+  color: var(--text-primary);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-sm);
+}
+#app-mount .container-1Lk8p7 .container-x8Y1ix .arrow-2yY1Tm {
+  margin-right: 10px;
+  filter: invert(1);
+}
+#app-mount .container-1Lk8p7 .container-x8Y1ix .text-PdAsFQ {
+  color: var(--text-primary);
+}
+#app-mount .container-1Lk8p7 .skip-2hTIXL {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+  color: var(--text-muted) !important;
+}
+#app-mount .container-1Lk8p7 .footerTitle-3Bslxi {
+  color: var(--text-tertiary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
+  margin: 0;
+}
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes settingsIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.platform-win #app-mount .typeWindows__421ed + div .layer__960e4 {
+  top: 0;
+  padding-top: 0;
+}
+.platform-win #app-mount .typeWindows__421ed + div .layer__960e4.baseLayer__960e4 {
+  padding-top: calc(var(--win-btn-height) + 4px) !important;
+}
+.platform-win #app-mount .typeWindows__421ed + div .standardSidebarView__23e6b {
+  top: 0;
+}
+
+.typeWindows__421ed {
+  height: var(--win-btn-height);
+  z-index: 2;
+  background: transparent;
+  position: fixed;
+  width: calc(100% - 72px - var(--server-size));
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  right: 0;
+}
+
+.winButton__421ed {
+  height: calc(var(--win-btn-height) + 4px);
+  width: var(--win-btn-width);
+  cursor: var(--cursor);
+}
+
+.wordmarkWindows__421ed {
+  display: none;
+}
+
+#app-mount .base_c48ade {
+  border-top-left-radius: 20px;
+}
+
+[aria-label="Edit Image with Apps"] {
+  display: none !important;
+}
+
+[aria-label="Text icon"] {
+  display: none !important;
+}
+
+[aria-label="Text (Active Threads) icon"] {
+  display: none !important;
+}
+
+[aria-label="Text (Limited) icon"] {
+  display: none !important;
+}
+
+[aria-label="Announcements (Limited) icon"] {
+  display: none !important;
+}
+
+[aria-label="Voice (Limited) icon"] {
+  display: none !important;
+}
+
+[aria-label="Voice icon"] {
+  display: none !important;
+}
+
+.scrollableContainer__74017 {
+  background: var(--background-secondary) !important;
+}
+
+.linkButtonIcon__972a0 {
+  display: none !important;
+}
