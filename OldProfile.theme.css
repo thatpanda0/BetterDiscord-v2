@@ -1,0 +1,318 @@
+/**
+ * @name OldProfile
+ * @author That Panda
+ * @version 1
+ * @description Old 2023 Discord Profile.
+*/
+
+
+
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Light"), url("https://discordstyles.github.io/Fluent/fonts/light.woff2") format("woff2");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Semilight"), url("https://discordstyles.github.io/Fluent/fonts/semilight.woff2") format("woff2");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI"), url("https://discordstyles.github.io/Fluent/fonts/normal.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Semibold"), url("https://discordstyles.github.io/Fluent/fonts/semibold.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Bold"), url("https://discordstyles.github.io/Fluent/fonts/bold.woff2") format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Segoe Fluent Icons";
+  src: local("Segoe Fluent Icons"), url("https://takosthings.github.io/Fluent-Discord-Fonts/Segoe-Fluent-Icons.ttf") format("truetype");
+}
+:root {
+  --font-primary: "Segoe UI Variable Text", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+  --font-code: Consolas, Menlo, Monaco, "Courier New", monospace;
+}
+
+.descriptionClamp_f5f93a {
+	padding-bottom: 10px;
+}
+
+/* Body 1 */
+
+.viewFullBio_f5f93a {
+	display: none;
+}
+.descriptionClamp_f5f93a {
+	-webkit-line-clamp: 190 !important;
+	position: relative;
+	max-height: 2000px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin-bottom: 40px;
+}
+.descriptionClamp_f5f93a::-webkit-scrollbar-thumb {
+	background: transparent;
+	border-radius: 99px;
+}
+.descriptionClamp_f5f93a::-webkit-scrollbar {
+	width: 4px;
+}
+.descriptionClamp_f5f93a:hover::-webkit-scrollbar-track {
+	background: 0 0;
+	border-radius: 10px;
+}
+.descriptionClamp_f5f93a:hover::-webkit-scrollbar-thumb {
+	background: var(--bg-overlay-6, var(--background-tertiary));
+	border-radius: 0px;
+}
+.descriptionClamp_f5f93a:before {
+	content: "ABOUT ME";
+	font-size: 13px;
+	color: var(--header-secondary);
+	font-weight: 800;
+	font-family: var(--font-display);
+    
+}
+.custom-profile-theme.theme-dark .body__5be3e {
+    z-index: 1;
+    padding: 8px 6px 8px;
+    margin: auto;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 265px;
+    overflow: visible !important;
+}
+
+.custom-profile-theme.theme-light .body__5be3e {
+    z-index: 1;
+    padding: 8px 6px 8px;
+    margin: auto;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(255,255,255, 0.5);
+    border-radius: 10px;
+    width: 265px;
+    overflow: visible !important;
+}
+
+
+.body__5be3e {
+    z-index: 1;
+    padding: 8px 6px 8px;
+    margin: auto;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(200,200,200,0.1);
+    border-radius: 10px;
+    width: 265px;
+    overflow: visible !important;
+}
+
+.root_fccfdf {
+    margin-bottom: 50px;
+}
+
+/* Roles */
+
+
+.root_fccfdf:before {
+	content: "ROLES";
+	font-size: 13px;
+	color: var(--header-secondary);
+	font-weight: 800;
+	font-family: var(--font-display);
+	margin-right: 200px;
+	margin-bottom: 4px;
+}
+
+
+/* before you yell at me I CANNOT figure out how to retain the hover for badges while not intersecting with status */
+/* Badges */
+
+
+.custom-profile-theme.theme-dark .container__8061a {
+	display: flex; /* replace with display: none; for no badges */
+	padding: 4px;
+	border-radius: 10px;
+	background: rgba(0,0,0,0.3) !important;
+}
+
+.custom-profile-theme.theme-light .container__8061a {
+	display: flex; /* replace with display: none; for no badges */
+	padding: 4px;
+	border-radius: 10px;
+	background: rgba(255,255,255,0.5) !important;
+}
+
+.container__8061a {
+	display: flex; /* replace with display: none; for no badges */
+	padding: 4px;
+	border-radius: 10px;
+	background: rgba(200,200,200,0.1) !important;
+}
+
+.container__8061a {
+	position: absolute;
+	display: flex !important;
+	margin-top: -130px;
+	/* triage for placement of badges */
+	left: 190px; 
+}
+
+.container__63ed3 {
+    border-bottom: 1px solid rgba(128,128,128,0.33); 
+    padding-bottom: 70px; /* 50px if with status */
+}
+
+
+
+/* status */
+
+.container_ab8609 {
+	top: 200px !important;
+	left: 20px !important;
+}
+
+.content_ab8609 {
+	min-width: 120px;
+}
+.referenceContainer_ab8609 {
+	display: none !important;
+}
+.outer_ab8609,
+.inner_ab8609 {
+	border: none ;
+	background: none;
+	text-align: left;
+	box-shadow: none;
+	border-radius: 0px !important;
+	min-width: 240px !important;
+}
+.outer_ab8609:before,
+.outer_ab8609:after {
+	display: none;
+}
+.outer_ab8609 {
+	background: transparent;
+}
+
+.outer_ab8609, .outer_ab8609:before,.outer_ab8609:after {
+	box-shadow: none;
+	z-index: 1;
+	background: transparent;
+	top: 117px !important;
+}
+
+.custom-profile-theme.theme-dark .outer_ab8609 {
+	border: none;
+}
+
+.custom-profile-theme.theme-light .outer_ab8609 {
+	border: none;
+}
+
+.content_ab8609 {
+  overflow: visible !important;
+  -webkit-line-clamp: 40 !important;
+}
+
+
+
+
+/* experimenting with notes */
+
+.nicknameIcons__63ed3 [aria-label]:after {
+	z-index: 1;
+	content: attr(aria-label);
+	position: absolute;
+	min-width: 250px;
+	text-align: left;
+	margin-left: 240px;
+	margin-top: auto;
+	max-height: 38px;
+	margin-bottom: 20px;
+}
+
+.nicknameIcons__63ed3 {
+	top: 100%;
+	position: absolute;
+	display: flex !important;
+	margin-top: -20px;
+}
+
+.nicknameIcons__63ed3 .button_fb7f94 {
+	opacity: 1;
+}
+
+.nicknameIcons__63ed3 .button_fb7f94:before {
+	z-index: 1;
+	content: "NOTE";
+	bottom: 25px;
+	left: 1px;
+	position: absolute;
+	color: var(--header-secondary);
+	font-weight: 800;
+	font-size: 13px;
+}
+
+.nicknameIcons__63ed3 .buttonInner_fb7f94 {
+	display: none;
+}
+
+.nicknameIcons__63ed3 {
+	display: none;
+}
+
+element.style {
+	overflow: visible;
+}
+
+.biteSize_cb78f1 div:nth-child(2) {
+	display: none;
+}
+
+
+/* optional features */
+
+.userPopoutOuter_c69a7b {
+	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px var(--deprecated-card-bg) !important;
+	border-radius: 15px;
+}
+
+.footer_aa1bff {
+	display: none;
+}
+
+.popover_cf8aee {
+	display: none;
+}
+
+/* friend button */
+
+.wrapper_cb78f1 {
+	background: transparent !important;
+	opacity: 0.1;
+}
+
+
+/* profile area */
+
+
+.theme-light .container__37e49 {
+  background: var(--bg-overlay-2, --background-secondary-alt) !important;
+}
+
+.panels_c48ade {
+  background-color: transparent !important;
+}
