@@ -1,0 +1,299 @@
+/**
+ * @name idfk anymore
+ * @author That Panda
+ * @version 1
+ * @description fuck you discord
+*/
+
+
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Light"), url("https://discordstyles.github.io/Fluent/fonts/light.woff2") format("woff2");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Semilight"), url("https://discordstyles.github.io/Fluent/fonts/semilight.woff2") format("woff2");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI"), url("https://discordstyles.github.io/Fluent/fonts/normal.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Semibold"), url("https://discordstyles.github.io/Fluent/fonts/semibold.woff2") format("woff2");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: local("Segoe UI Bold"), url("https://discordstyles.github.io/Fluent/fonts/bold.woff2") format("woff2");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Segoe Fluent Icons";
+  src: local("Segoe Fluent Icons"), url("https://takosthings.github.io/Fluent-Discord-Fonts/Segoe-Fluent-Icons.ttf") format("truetype");
+}
+:root {
+  --font-primary: "Segoe UI Variable Text", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+  --font-code: Consolas, Menlo, Monaco, "Courier New", monospace;
+}
+
+
+@import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
+
+.visual-refresh {
+    --vr-header-snippet-top: 0px;
+    --vr-header-snippet-server-padding: 16px;
+    --vr-header-snippet-space: 85px;
+    --vr-header-snippet-button-padding: 0;
+
+    div.subtitleContainer_f75fb0,
+    div.chat_f75fb0,
+    main.container__133bf,
+    div.chatLayerWrapper__01ae2 {
+        & section.container__9293f {
+            padding-right: var(--vr-header-snippet-space);
+        }
+    }
+
+    div.page_c48ade {
+        &:not(:has(> div.chat_f75fb0)) {
+            anchor-name: --vr-header-snippet;
+        }
+
+        & > div.chat_f75fb0 {
+            anchor-name: --vr-header-snippet;
+        }
+    }
+
+    div.base_c48ade {
+        grid-template-rows: [top] 0 [titleBarEnd] min-content [noticeEnd] 1fr [contentEnd] min-content [end];
+
+        & > div.bar_c38106 {
+            position: absolute;
+            position-anchor: --vr-header-snippet;
+            top: var(--vr-header-snippet-top);
+            right: anchor(right);
+            width: anchor-size(width);
+            padding: 0 var(--vr-header-snippet-button-padding) 0 0;
+
+            & > .title_c38106 {
+                display: none;
+            }
+        }
+
+        &:has(> .notice__6e2b9) {
+            & > div.bar_c38106 {
+                top: anchor(top);
+            }
+        }
+
+        & div.trailing_c38106 {
+            background: none;
+            border: none;
+            z-index: -1 !important;
+            height: var(--custom-channel-header-height);
+        }
+
+        & > div.content_c48ade {
+            z-index: 0;
+        }
+
+        &:has(.threadSidebarOpen_f75fb0.threadSidebarFloating_f75fb0)
+            > .bar_c38106 {
+            z-index: 0;
+        }
+    }
+
+    :not(:has(div.page_c48ade > div.chat_f75fb0))
+        div.base_c48ade
+        > div.bar_c38106 {
+        right: 0 !important;
+    }
+
+    ul[data-list-id="guildsnav"]
+        > div.itemsContainer_ef3116
+        > div.stack_dbd263 {
+        margin-top: var(--vr-header-snippet-server-padding);
+    }
+}
+
+
+:root {
+    /* Only include this part if you wish to change these variables */
+    /* You can change the size but only to be less than 48px, you must change the blob scale too */
+    --guildbar-avatar-size: 48px;
+    --blob-scale: 48;
+
+    --guildbar-folder-size: var(--guildbar-avatar-size);
+    --folder-blob-scale: var(--blob-scale);
+}
+
+:root {
+    /* controls the vertical position of the window buttons */
+    --vr-header-snippet-top: 0px !important;
+    /* controls the space above the server list */
+    --vr-header-snippet-server-padding: 16px !important;
+    /* controls the space the window buttons get on the channel header, experiment around with this if you get gaps or the buttons overlap! */
+    --vr-header-snippet-space: 240px !important;
+    /* controls the space to the right of the window buttons, good if you are using themes like midnight which add padding to the bar */
+    --vr-header-snippet-button-padding: 0 !important;
+}
+
+
+.visual-refresh section.panels_c48ade {
+  left: calc(var(--custom-guild-list-width) + var(--space-xs));
+  width: calc(100% - var(--custom-guild-list-width) - var(--space-xs)*2);
+  box-sizing: content-box;
+
+  .actionButtons_e131a9 button {
+    padding: 0;
+  }
+
+  /* GameActivityToggle Fix (delete if you don't use) */
+  /* .container__37e49 {
+    padding: var(--space-xxs);
+    gap: var(--space-4);
+    >.buttons__37e49 {
+      gap: 0;
+    }
+    >.avatarWrapper__37e49 {
+      min-width: 32px !important;
+      >.avatar__37e49 {
+        scale: 0.9;
+      }
+    }
+  } */
+}
+nav.guilds_c48ade {
+  margin-bottom: 0 !important;
+}
+.sidebar_c48ade:after {
+  display: none;
+}
+/* BetterFolders fix (delete if you don't use) */
+/* .visual-refresh [style$="grid-area: betterFoldersSidebar;"]~section.panels_c48ade {
+  left: calc(var(--custom-guild-list-width)*2  + var(--space-xs));
+  width: calc(100% - var(--custom-guild-list-width)*2 - var(--space-xs)*2 ) !important;
+} */
+
+.icon_f34534.guildIcon__48112 { border-radius: 50% !important }
+
+.bar_c38106{
+    z-index: 28371983721897;
+}
+.title_c38106{
+    background-color: transparent;
+    background: linear-gradient(to bottom, var(--background-base-lowest), #00000000);
+}
+.title_a7d72e{
+    -webkit-app-region: drag;
+}
+
+.sidebar_c48ade{
+    overflow: visible !important;
+    position: relative;
+}
+
+.sidebarList_c48ade{
+    margin-left: 72px;
+}
+
+.wrapper_ef3116{
+    position: absolute;
+    top: -35px;
+    height: calc(100vh - 65px);
+    /* padding-top: 10px; */
+}
+
+[class^="stack_dbd263 scroller_ef3116"]{
+    padding-top: 40px !important;
+}
+
+/* revert new imageviewer */
+
+
+.layerContainer_da8173:has(.carouselModal_d3a6f0) .tooltip__382e7 {
+    display: none;
+}
+
+.carouselModal_d3a6f0 {
+    justify-content: center;
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    margin: auto;
+
+    .topBar__6088c {
+        place-self: start;
+        order: 1;
+
+        .actionButtons_cc1819 {
+            padding: 0px !important;
+            margin: 0px !important;
+            background-color: transparent;
+            border: none;
+        }
+
+        .authorAvatar__6088c,
+        .author__6088c,
+        .closeButton__6088c,
+        .actionButton_cc1819:has(path[d="M15.62 17.03a9 9 0 1 1 1.41-1.41l4.68 4.67a1 1 0 0 1-1.42 1.42l-4.67-4.68ZM17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"]),
+        .actionButton_cc1819:has(path[d="M21.7 7.3a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4L18.58 9H13a7 7 0 0 0-7 7v4a1 1 0 1 1-2 0v-4a9 9 0 0 1 9-9h5.59l-3.3-3.3a1 1 0 0 1 1.42-1.4l5 5Z"]),
+        .actionButton_cc1819:has(path[d="M4 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm8 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"]) {
+            display: none !important;
+        }
+
+        .actionButton_cc1819:has(path[d="M15 2a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0V4.41l-4.3 4.3a1 1 0 1 1-1.4-1.42L19.58 3H16a1 1 0 0 1-1-1Z"]) {
+            width: auto;
+            height: 0;
+
+            &::after {
+                content: "Open in browser";
+                width: max-content;
+                display: flex;
+                height: auto;
+                pointer-events: all;
+
+                :hover {
+                    color: white;
+                }
+            }
+
+            &::after:hover {
+                color: white;
+            }
+
+            .actionButtonInner_cc1819 {
+                display: none;
+
+            }
+        }
+    }
+
+    .navPrev_b2eddf {
+        position: fixed;
+        left: -64px;
+        background-color: transparent;
+
+        .buttonInner_aec7ab {
+            border: none !important;
+        }
+    }
+
+    .navNext_b2eddf {
+        position: fixed;
+        right: -64px;
+        background-color: transparent;
+
+        .buttonInner_aec7ab {
+            border: none !important;
+        }
+    }
+    .galleryContainer_d75751 {
+        display: none;
+    }
+}
