@@ -1,5 +1,5 @@
 /**
- * @name f (light mode version)
+ * @name f (dark mode version)
  * @author a lot of people
  * @version 1
  * @description collection of snippets
@@ -297,7 +297,7 @@
 
 
 .contents_c19a55 .messageContent_c19a55 {
-  background-color: #e9e9eb;
+  background-color: #26252a;
   display: inline-block;
   max-width: 650px;
   width: -webkit-fit-content;
@@ -460,98 +460,6 @@
   display: none;
 }
 
-/* --------------------------------- */
-
-.messageContent_c19a55:empty {
-  display: none !important;
-}
-
-.newMessagesBar_cf58b5 {
-  background-color: var(--darkplus-sec);
-}
-
-.messageGroupWrapper_ac90a2 .messageGroupCozy_ac90a2 {
-  background-color: var(--darkplus-bg2);
-}
-
-.messages_c06487 {
-  background-color: var(--darkplus-bg2);
-}
-.channelHeader_f3978e {
-  background-color: var(--darkplus-bg2);
-}
-.tertiary_ad6d80 {
-  background-color: var(--darkplus-bg);
-  color: var(--darkplus-sec);
-}
-.tertiary_ad6d80:hover:not(.disabled__4d064) {
-  background-color: var(--darkplus-bg);
-  color: var(--darkplus-sec);
-}
-.tutorialIcon_f1c3d9 {
-  background-color: var(--darkplus-bg);
-  color: var(--darkplus-sec);
-}
-.secondary__45d4f {
-  background-color: var(--darkplus-bg2);
-  color: var(--darkplus-sec);
-}
-.secondary__45d4f:hover:not(.disabled__4d064) {
-  background-color: var(--darkplus-bg2);
-  color: var(--darkplus-sec);
-}
-.messageContainer_ddb5b4 {
-  background-color: var(--darkplus-bg2);
-}
-
-
-
-
-
-
-
-.theme-dark .messageContent_c19a55:empty {
-  display: none !important;
-}
-
-.theme-dark .newMessagesBar_cf58b5 {
-  background-color: var(--sigma);
-}
-
-.theme-dark .messageGroupWrapper_ac90a2 .messageGroupCozy_ac90a2 {
-  background-color: var(--sigma);
-}
-
-.theme-dark .messages_c06487 {
-  background-color: var(--sigma);
-}
-.theme-dark .channelHeader_f3978e {
-  background-color: var(--sigma);
-}
-.theme-dark .tertiary_ad6d80 {
-  background-color: var(--sigma);
-  color: var(--darkplus-sec);
-}
-.theme-dark .tertiary_ad6d80:hover:not(.disabled__4d064) {
-  background-color: var(--sigma);
-  color: var(--darkplus-sec);
-}
-.theme-dark .tutorialIcon_f1c3d9 {
-  background-color: var(--sigma);
-  color: var(--darkplus-sec);
-}
-.theme-dark .secondary__45d4f {
-  background-color: var(--sigma);
-  color: var(--darkplus-sec);
-}
-.theme-dark .secondary__45d4f:hover:not(.disabled__4d064) {
-  background-color: var(--sigma);
-  color: var(--darkplus-sec);
-}
-.theme-dark .messageContainer_ddb5b4 {
-  background-color: var(--sigma);
-}
-
 
 [data-is-self="true"] .content__235ca {
   color: white !important;
@@ -577,9 +485,9 @@
 }
 
 .chatContent_f75fb0, .chat_f75fb0 {
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-    url('https://google.com/') !important;
+  /* background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07)),
+    url('https://raw.githubusercontent.com/thatpanda0/BetterDiscord-v2/refs/heads/main/plat_light.jpg') !important; */
   background-size: cover;
   background-position: center;
 }
@@ -604,14 +512,5 @@
 }
 
 [role="tree"] {
-	background-color: #e3e5e8 !important;
-}
-
-/* ----- do we really need tags? ----- */
-
-.chipletContainerInner__10651, 
-.chipletContainerInine__10651,
-.clickable__10651, 
-.clanTagChiplet_c19a55 {
-  display: none !important;
+	background-color: #202225 !important;
 }

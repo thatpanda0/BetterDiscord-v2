@@ -7,40 +7,7 @@
 
 
 
-@font-face {
-  font-family: "Segoe UI";
-  src: local("Segoe UI Light"), url("https://discordstyles.github.io/Fluent/fonts/light.woff2") format("woff2");
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Segoe UI";
-  src: local("Segoe UI Semilight"), url("https://discordstyles.github.io/Fluent/fonts/semilight.woff2") format("woff2");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Segoe UI";
-  src: local("Segoe UI"), url("https://discordstyles.github.io/Fluent/fonts/normal.woff2") format("woff2");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Segoe UI";
-  src: local("Segoe UI Semibold"), url("https://discordstyles.github.io/Fluent/fonts/semibold.woff2") format("woff2");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Segoe UI";
-  src: local("Segoe UI Bold"), url("https://discordstyles.github.io/Fluent/fonts/bold.woff2") format("woff2");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Segoe Fluent Icons";
-  src: local("Segoe Fluent Icons"), url("https://takosthings.github.io/Fluent-Discord-Fonts/Segoe-Fluent-Icons.ttf") format("truetype");
-}
-:root {
-  --font-primary: "Segoe UI Variable Text", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
-  --font-display: "Segoe UI Variable Display", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
-  --font-code: Consolas, Menlo, Monaco, "Courier New", monospace;
-}
+
 
 .descriptionClamp_f5f93a {
 	padding-bottom: 10px;
@@ -181,11 +148,11 @@
 
 .container_ab8609 {
 	top: 200px !important;
-	left: 20px !important;
+	left: 15px !important;
 }
 
 .content_ab8609 {
-	min-width: 120px;
+	min-width: 240px;
 }
 .referenceContainer_ab8609 {
 	display: none !important;
@@ -197,7 +164,8 @@
 	text-align: left;
 	box-shadow: none;
 	border-radius: 0px !important;
-	min-width: 240px !important;
+	min-width: 260px !important;
+	min-height: 50px !important;
 }
 .outer_ab8609:before,
 .outer_ab8609:after {
@@ -236,7 +204,7 @@
 	z-index: 1;
 	content: attr(aria-label);
 	position: absolute;
-	min-width: 250px;
+	min-width: 240px;
 	text-align: left;
 	margin-left: 240px;
 	margin-top: auto;
