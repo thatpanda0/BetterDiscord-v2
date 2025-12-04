@@ -1,8 +1,8 @@
 /**
- * @name f (light mode version)
+ * @name idk
  * @author a lot of people
- * @version 1
- * @description collection of snippets
+ * @version 1.1
+ * @description Bunch of snippets (message bubbles, changed activity tab, removed some things)
 */
 
 @import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
@@ -39,21 +39,14 @@
   src: local("Segoe Fluent Icons"), url("https://takosthings.github.io/Fluent-Discord-Fonts/Segoe-Fluent-Icons.ttf") format("truetype");
 }
 :root {
-  --font-primary: /*        "Inter",       */"Segoe UI Variable Text", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+  --font-primary: "Inter", "Segoe UI Variable Text", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
   --font-display: "Segoe UI Variable Display", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
   --font-code: Consolas, Menlo, Monaco, "Courier New", monospace;
 }
 
-/* --- only enable with macOS titlebar --- */
-
-.trailing_c38106 {
-  right: 16px !important;
-}
 
 /* -------- */
 :root {
-    /* Only include this part if you wish to change these variables */
-    /* You can change the size but only to be less than 48px, you must change the blob scale too */
     --guildbar-avatar-size: 48px;
     --blob-scale: 48;
 
@@ -70,174 +63,6 @@
 
 .visual-refresh nav[class*=guilds_] {
   margin-bottom: unset;
-}
-
-/* ---------------------------------------------------- */
-
-.visual-refresh {
-  --vr-header-snippet-top: 0px;
-  --vr-header-snippet-server-padding: 16px;
-  --vr-header-snippet-space: 106px; /* 106px if using macOS titlebar, 270 if not */
-  --vr-header-snippet-button-padding: 0;
-
-  div.chat_f75fb0:not(.threadSidebarOpen_f75fb0),
-  main.container__133bf,
-  div.chatLayerWrapper__01ae2 {
-    & section.container__9293f {
-      padding-right: var(--vr-header-snippet-space);
-    }
-  }
-
-  div.headerBar__8a7fc.overlay__8a7fc {
-    padding-right: var(--vr-header-snippet-space);
-
-    & .tab__65d41,
-    & .searchBar__1ac1c {
-      -webkit-app-region: no-drag;
-    }
-  }
-
-  div.videoControls_bfe55a div.subtitleContainer__49508 {
-    padding-right: calc(var(--vr-header-snippet-space) - 20px);
-
-    & .toolbar__9293f {
-      -webkit-app-region: no-drag;
-    }
-  }
-
-  div.page_c48ade {
-    &:not(:has(> div.chat_f75fb0)) {
-      anchor-name: --vr-header-snippet;
-    }
-
-    & > div.chat_f75fb0 {
-      anchor-name: --vr-header-snippet;
-    }
-  }
-
-  div.base_c48ade {
-    grid-template-rows: [top] 0 [titleBarEnd] min-content [noticeEnd] 1fr [contentEnd] min-content [end];
-
-    &:has(div.bar_c38106 > div.trailing_c38106 .updateIconForeground__49676) {
-      & div.chat_f75fb0,
-      & div.subtitleContainer_f75fb0,
-      & main.container__133bf,
-      & div.chatLayerWrapper__01ae2 {
-        & section.container__9293f {
-          padding-right: calc(var(--vr-header-snippet-space) + 50px);
-        }
-      }
-
-      & div.videoControls_bfe55a .topControls_bfe55a div.toolbar__9293f {
-        margin-right: calc(var(--vr-header-snippet-space) + 30px) !important;
-      }
-    }
-
-    & > div.content_c48ade {
-      z-index: 0;
-    }
-
-    & > div.bar_c38106 {
-      position: absolute;
-      position-anchor: --vr-header-snippet;
-      top: var(--vr-header-snippet-top);
-      right: anchor(right);
-      width: anchor-size(width);
-      padding: 0 var(--vr-header-snippet-button-padding) 0 0;
-
-      & > .title_c38106 {
-        display: none;
-      }
-    }
-
-    &:has(> .notice__6e2b9) {
-      & > div.bar_c38106 {
-        top: anchor(top);
-      }
-    }
-
-    & div.trailing_c38106 {
-      background: none;
-      border: none;
-      height: var(--custom-channel-header-height);
-    }
-
-    &:has(.threadSidebarOpen_f75fb0.threadSidebarFloating_f75fb0) > .bar_c38106 {
-      z-index: 0;
-    }
-  }
-
-  :not(:has(div.page_c48ade > div.chat_f75fb0)) div.base_c48ade > div.bar_c38106 {
-    right: 0 !important;
-  }
-
-  ul[data-list-id="guildsnav"] > div.itemsContainer_ef3116 > div.stack_dbd263 {
-    margin-top: var(--vr-header-snippet-server-padding);
-  }
-
-  section.header__0b563 div.toolbar__9293f,
-  section.header_c791b2 div.toolbar__9293f,
-  section.header_c791b2 div.children__9293f,
-  :not(.videoControls_bfe55a) div.topic__6ec1a {
-    -webkit-app-region: no-drag;
-  }
-
-  .div.videoControls_bfe55a .topControls_bfe55a {
-    z-index: -1;
-  }
-}
-
-/* ---------------------------------------------------- */
-
-/* comment this in or out if you want macOS buttons because idk */
-
-
-.stack_dbd263 {
-  top: 16px !important;
-}
-
-.platform-win .winButtons_c38106 {
-  left: 0;
-  position: fixed;
-  flex-direction: row-reverse;
-  top: 10px !important;
-}
-.platform-win .bar_c38106[data-windows=true] {
-  padding-right: var(--space-12);
-}
-.platform-win .winButtonsWithDivider_c38106:before {
-  display: none;
-}
-.platform-win .winButton_c38106 {
-  width: 14px;
-  height: 14px;
-  margin-left: 5px;
-  border-radius: 25px;
-  background-color: var(--background-primary);
-  background-size: 0;
-  -webkit-app-region: no-drag;
-}
-
-.platform-win .winButton_c38106 svg {
-  display: none;
-}
-.platform-win.app-focused .winButtons_c38106:hover .winButton_c38106 {
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-.platform-win.app-focused .winButtons_c38106 .winButtonClose_c38106 {
-  background-color: #ff5c57;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjkyODkgNkwyLjgxODAxIDMuNTI1MTNMMy41MjUxMiAyLjgxODAyTDUuOTk5OTkgNS4yOTI4OUw4LjQ3NDg3IDIuODE4MDJMOS4xODE5NyAzLjUyNTEzTDYuNzA3MSA2TDkuMTgxOTcgOC40NzQ4N0w4LjQ3NDg3IDkuMTgxOThMNS45OTk5OSA2LjcwNzExTDMuNTI1MTIgOS4xODE5OEwyLjgxODAxIDguNDc0ODdMNS4yOTI4OSA2WiIgZmlsbD0iI0EyMDAwOCIvPgo8L3N2Zz4=);
-}
-.platform-win.app-focused .winButtons_c38106 .winButtonMinMax_c38106:nth-child(1) {
-  background-color: #fdbd3d;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwIDUuMzk5OTlIMlY2LjU5OTk5SDEwVjUuMzk5OTlaIiBmaWxsPSIjQjM3MTFBIi8+Cjwvc3ZnPg==);
-}
-.platform-win.app-focused .winButtons_c38106 .winButtonMinMax_c38106:nth-child(2) {
-  order: -1;
-  background-color: #26c84b;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcuMzkyOTMgMy4wMDg5M0wzLjAwODg3IDcuMzkyOTlMMi44MTc5NSAyLjgxODAxTDcuMzkyOTMgMy4wMDg5M1oiIGZpbGw9IiMwMjZBMTUiLz4KPHBhdGggZD0iTTQuNjA2OTUgOC45OTEwMUw4Ljk5MTAxIDQuNjA2OTVMOS4xODE5MyA5LjE4MTkzTDQuNjA2OTUgOC45OTEwMVogIiBmaWxsPSIjMDI2QTE1Ii8+Cjwvc3ZnPg==);
 }
 
 
@@ -614,4 +439,42 @@
 .clickable__10651, 
 .clanTagChiplet_c19a55 {
   display: none !important;
+}
+
+/* no inbox */
+
+[aria-label="Inbox"],
+[aria-label="Open Quick Switcher"],
+[aria-label="Submit a Bug Report"] {
+  display: none !important;
+}
+
+
+/* activity tab */
+
+.standaloneContainer__7d20c {
+  width: 97% !important;
+  max-width: 97% !important;
+}
+
+
+/* uh idk */
+
+.title_c38106 {
+  display: none !important;
+}
+
+
+/* completely forgot dark mode users existed oops */
+
+.theme-dark .chatContent_f75fb0, .chat_f75fb0 {
+  background: #000 !important;
+}
+
+.theme-dark [role=tree] {
+  background-color: #121212 !important;
+}
+
+.theme-dark .contents_c19a55 .messageContent_c19a55 {
+  background-color: #343434 !important;
 }
