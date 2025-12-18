@@ -30,7 +30,7 @@
 	max-height: 2000px;
 	overflow-x: hidden;
 	overflow-y: auto;
-	margin-bottom: 40px;
+	margin-bottom: 80px;
 }
 .f5f93a5c4078d63c-descriptionClamp::-webkit-scrollbar-thumb {
 	background: transparent;
@@ -205,90 +205,87 @@
 
 
 /* experimenting with notes */
+/* from milbits/OldCord thanks */
 
-._63ed30c16c7151f2-nicknameIcons [aria-label]:after {
-	z-index: 1;
-	content: attr(aria-label);
-	position: absolute;
-	min-width: 240px;
-	text-align: left;
-	margin-left: 240px;
-	margin-top: auto;
-	max-height: 38px;
-	margin-bottom: 20px;
-}
 
 ._63ed30c16c7151f2-nicknameIcons {
-	top: 100%;
+	top: calc(100% - 50px);
 	position: absolute;
 	display: flex !important;
-	margin-top: -20px;
+	padding-top: 15px !important;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 100%;
+	margin-top: auto;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	& span:nth-of-type(1) {
+		width: 0;
+
+	}
+	& ._0f0745937100f096-button {
+		opacity: 1;
+		width: 10px;
+	}
+	& .b18fe29d6fe8dd82-hiddenVisually:before {
+		content: "NOTE";
+		position: absolute;
+		margin-top: -17px;
+		color: var(--header-secondary);
+		font-weight: 800;
+		font-family: var(--font-display);
+		font-size: 13px;
+	}
+	& ._0f0745937100f096-button svg {
+		display: none;
+	}
+	& .b18fe29d6fe8dd82-hiddenVisually {
+		display: inline-block;
+		align-content: start;
+		text-align: left;
+		min-height: 38px;
+		margin-top: 10px;
+		white-space: pre-wrap;
+		color: var(--header-secondary);
+		font-weight: 500;
+		font-family: var(--font-display);
+		font-size: 13px;
+		user-select: text;
+		clip: unset;
+		clip-path: unset;
+		height: unset;
+		overflow: auto;
+		position: unset;
+		width: unset;
+		&::-webkit-scrollbar-thumb {
+			background: transparent;
+			border-radius: 99px;
+		}
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+		&:hover::-webkit-scrollbar-track {
+			background: 0 0;
+			border-radius: 10px;
+		}
+		&:hover::-webkit-scrollbar-thumb {
+			background: var(--background-gradient-highest, var(--background-tertiary));
+			border-radius: 999px;
+		}
+	}
 }
 
-._63ed30c16c7151f2-nicknameIcons .button_fb7f94 {
-	opacity: 1;
-}
-
-._63ed30c16c7151f2-nicknameIcons .button_fb7f94:before {
-	z-index: 1;
-	content: "NOTE";
-	bottom: 25px;
-	left: 1px;
-	position: absolute;
-	color: var(--header-secondary);
-	font-weight: 800;
-	font-size: 13px;
-}
-
-._63ed30c16c7151f2-nicknameIcons .buttonInner_fb7f94 {
+._5be3ef42f92174b2-footer:is(:empty) {
 	display: none;
 }
 
-._63ed30c16c7151f2-nicknameIcons {
-	display: none;
-}
-
-element.style {
-	overflow: visible;
-}
-
-.biteSize_cb78f1 div:nth-child(2) {
-	display: none;
-}
-
-
-/* optional features */
-
-.userPopoutOuter_c69a7b {
-	box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px var(--deprecated-card-bg) !important;
-	border-radius: 15px;
-}
-
-.footer_aa1bff {
-	display: none;
-}
-
-.popover_cf8aee {
-	display: none;
-}
 
 /* friend button */
 
-.wrapper_cb78f1 {
+.da589062f0c96515-wrapper {
 	background: transparent !important;
 	opacity: 0.1;
-}
-
-
-/* profile area */
-
-
-.theme-light .container__37e49 {
-  background: var(--bg-overlay-2, --background-secondary-alt) !important;
-}
-
-.panels_c48ade {
-  background-color: transparent !important;
 }
 
 
