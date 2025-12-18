@@ -1,51 +1,26 @@
 /**
- * @name idk
- * @author a lot of people
- * @version 1.1
- * @description Bunch of snippets (message bubbles, changed activity tab, removed some things)
+ * @name Discord-
+ * @author me.
+ * @version 1.2-beta
+ * @description Uh I forgot
 */
 
-@import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
 
+/* ------------ Fonts, imports ------------ */
+
+
+@import url("https://scattagain.github.io/VencordStuff/css/GuildbarRevert.css");
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-@font-face {
-  font-family: "Segoe UI";
-  src: local("Segoe UI Light"), url("https://discordstyles.github.io/Fluent/fonts/light.woff2") format("woff2");
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Segoe UI";
-  src: local("Segoe UI Semilight"), url("https://discordstyles.github.io/Fluent/fonts/semilight.woff2") format("woff2");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Segoe UI";
-  src: local("Segoe UI"), url("https://discordstyles.github.io/Fluent/fonts/normal.woff2") format("woff2");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Segoe UI";
-  src: local("Segoe UI Semibold"), url("https://discordstyles.github.io/Fluent/fonts/semibold.woff2") format("woff2");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Segoe UI";
-  src: local("Segoe UI Bold"), url("https://discordstyles.github.io/Fluent/fonts/bold.woff2") format("woff2");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Segoe Fluent Icons";
-  src: local("Segoe Fluent Icons"), url("https://takosthings.github.io/Fluent-Discord-Fonts/Segoe-Fluent-Icons.ttf") format("truetype");
-}
 :root {
-  --font-primary: "Inter", "Segoe UI Variable Text", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
-  --font-display: "Segoe UI Variable Display", "Segoe UI", "Helvetica Neue", Helvetica, Verdana, Tahoma, Geneva, Arial, sans-serif;
+  --font-primary: "Inter", sans-serif;
+  --font-display: "Inter", sans-serif;
   --font-code: Consolas, Menlo, Monaco, "Courier New", monospace;
 }
 
 
-/* -------- */
+/* ------------ Uh I forgot but I think it's server icon size ------------ */
+
 :root {
     --guildbar-avatar-size: 48px;
     --blob-scale: 48;
@@ -66,415 +41,53 @@
 }
 
 
-/* ---------------------------------------------------- */
+/* ------------ Remove junk ------------ */
 
 
 
-.channel__972a0 .link__972a0[href="/store"] {
-    display: none;
-}
-
-.privateChannelsHeaderContainer__99e7c {
-    padding-top: 14px;
-}
-
-.channel__972a0 .link__972a0[href="/shop"] {
-    display: none;
-}
-
-.privateChannelsHeaderContainer__99e7c {
-    padding-top: 14px;
-}
-
-.link__972a0 {
-	padding-top: 24px !important;
-	padding-bottom: 24px !important;
-	margin: 0px !important;
-}
-
-.link__2ea32 {
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-[aria-label="Text icon"] {
-	display: none;
-}
-
-/* msg bubbles */
-
-
-:root {
-  --darkplus-bg: #e9e9e9b;
-  --darkplus-bg2: #e9e9e9b;
-  --sigma: #111111;
-  --darkplus-sec: #bb86fc;
-  --darkplus-links: #cdaef3;
-  --darkplus-home-icon: url(https://devevil.com/betterdiscord/dark%2b-logo.png);
-  --watermark-filter-invert: 0%;
-  --watermark-filter-sepia: 50%;
-  --watermark-filter-saturate: 3000%;
-  --watermark-filter-hue-rotate: 210deg;
-  --watermark-filter-brightness: 70%;
-  --watermark-filter-contrast: 200%;
-}
-
-
-
-.contents_c19a55 .messageContent_c19a55 {
-  background-color: #e9e9eb;
-  display: inline-block;
-  max-width: 650px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0;
-  padding: 8px;
-  border-radius: 15px;
-}
-
-[data-is-self="true"] .contents_c19a55 .messageContent_c19a55 {
-  background: /*#357bf7*/ linear-gradient(#246ae6, #357bf7);
-  color: #fff;
-  display: block;
-}
-
-[data-is-self="true"] .header_c19a55 {
-	text-align: right !important;
-}
-
-/* yoinked the code from https://raw.githubusercontent.com/LuSaffi/VenCordstuff/refs/heads/main/CSS/selfMessages.css (too lazy to figure it out myself */
-
-   #app-mount [class^="messageListItem__"][data-is-self="true"],
-   #app-mount [class*=message][data-author-self=true] {
-    margin-left: auto;
-    width: auto;
-    padding-left: 1vw;
-    padding-right: 1.24vw !important;
-    max-width: fit-content;
-  }
-
-[class^="messageListItem__"][data-is-self="true"] [class*=container]:not([class*=shiki]),
-  [data-author-self=true] [class*=container]:not([class*=shiki]){
-    direction: rtl;
-    text-align: right;
-	 padding-right: 2rem;
-  }
-
-
-
-#app-mount [class^="messageListItem__"][data-is-self="true"] [class*=groupStart] > [class*=contents] > [class*=markup],
-#app-mount [class*=message][data-author-self=true] [class*=groupStart] > [class*=contents] > [class*=markup]  {
-   text-align: left;
-}
-  
-#app-mount [class^="messageListItem__"][data-is-self="true"] [class*=contents],
-#app-mount [class*=message][data-author-self=true] [class*=contents] {
-    display: inline-flexbox;
-    margin-left: auto;
-    margin-right: 2vw;
-}
-
-.horizontal_b26b79{
-  margin-left: -3.3rem;
-}
-.vertical_b26b79{
-  margin: 1vw  2.36vw -4vw !important;
-}
-
-
-  #app-mount [class^="messageListItem__"][data-is-self="true"][class*=message][class*=selected] [class*=contents],
-  #app-mount [class*=message][class*=selected][data-author-self=true] [class*=contents] {
-    width: 100%;
-  }
-
-
-  #app-mount [class^="messageListItem__"][data-is-self="true"] [class*=timestamp],
-  #app-mount [class*=message][data-author-self=true] [class*=timestamp] {
-    left: unset;
-    right: 8px;
-    margin-top: 1.75px;
-}
-
-
-  #app-mount [class^="messageListItem__"][data-is-self="true"] [class*=replying] [class*=contents] [class*=messageContent]::before,
-  #app-mount [class^="messageListItem__"][data-is-self="true"] [class*=mentioned] [class*=contents] [class*=messageContent]::before,
-  #app-mount [class*=replying][data-author-self=true] [class*=contents] [class*=messageContent]::before,
-  #app-mount [class*=mentioned][data-author-self=true] [class*=contents] [class*=messageContent]::before {
-    left: unset;
-    right: 0;
-  }
-
-#app-mount [class^="messageListItem__"][data-is-self="true"] [class*=contents] [class*=messageContent],
-#app-mount [class*=message] [data-author-self=true] [class*=content] [class*=messageContent]{
-    margin-left: auto;
-    padding: 8px;
-    border-radius: 15px;
-}
-
-  #app-mount [class^="messageListItem__"][data-is-self="true"] a:not([class*=embed] [class*=embedAuthorNameLink]),
-  #app-mount [class^="messageListItem__"][data-is-self="true"] [class*=repliedMessage]
-  #app-mount [class*=message][data-author-self=true] a:not([class*=embed] [class*=embedAuthorNameLink]),
-  #app-mount [class*=message][data-author-self=true] [class*=repliedMessage] {
-    margin-left: auto;
-  }
-
-  #app-mount [class^="messageListItem__"][data-is-self="true"] [class*=embedAuthor],
-  #app-mount [class*=message][data-author-self=true] [class*=embedAuthor] {
-    direction: ltr;
-  }
-  
-/* Self Avatar Icon */
-  #app-mount [class^="messageListItem__"][data-is-self="true"] [class*=avatar],
-  #app-mount [class*=message][data-author-self=true] [class*=avatar]{
-    left: unset;
-    right: 0.25rem;
-  }
-  [class^="messageListItem__"][data-is-self="true"] [class*=avatarDecoration],
-  [class*=message][data-author-self=true] [class*=avatarDecoration]{
-    right: 0px !important;
-  }
-
-/* resize fixing */
-  #app-mount [class*=contents] pre,
-  #app-mount [class*=message] {
-    max-width: 100%;
-  }
-  
-  #app-mount [class*=contents] [class*=messageContent] {
-    padding: 8px;
-    margin-left: unset;
-    width: fit-content;
-    border-radius: 15px;
-  }
-
-
-[class^="messageListItem__"][data-is-self="true"] [class*=compact][class*=wrapper] [class*=messageContent],
-[class*=message] [class*=compact] [class*=wrapper] [data-author-self=true] [class*=messageContent] {
-    display: flex;
-  }
-  
-  #app-mount [class*=compact] [class*=wrapper] {
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
-  #app-mount .mentioned__5126c .contents_c19a55 .messageContent_c19a55::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    pointer-events: none;
-    width: 3px;
-    margin: 8px 0;
-    z-index: 1;
-  }
-  
-  #app-mount .repliedMessage_c19a55 {
-    margin-bottom: 0;
-    padding: 6px;
-    border-radius: 5px;
-    width: fit-content;
-    max-width: 100%;
-  }
-
-
-[data-is-self=true] [id*=message-reply]::before{
-  display: none;
-}
-
-/* --------------------------------- */
-
-.messageContent_c19a55:empty {
-  display: none !important;
-}
-
-.newMessagesBar_cf58b5 {
-  background-color: var(--darkplus-sec);
-}
-
-.messageGroupWrapper_ac90a2 .messageGroupCozy_ac90a2 {
-  background-color: var(--darkplus-bg2);
-}
-
-.messages_c06487 {
-  background-color: var(--darkplus-bg2);
-}
-.channelHeader_f3978e {
-  background-color: var(--darkplus-bg2);
-}
-.tertiary_ad6d80 {
-  background-color: var(--darkplus-bg);
-  color: var(--darkplus-sec);
-}
-.tertiary_ad6d80:hover:not(.disabled__4d064) {
-  background-color: var(--darkplus-bg);
-  color: var(--darkplus-sec);
-}
-.tutorialIcon_f1c3d9 {
-  background-color: var(--darkplus-bg);
-  color: var(--darkplus-sec);
-}
-.secondary__45d4f {
-  background-color: var(--darkplus-bg2);
-  color: var(--darkplus-sec);
-}
-.secondary__45d4f:hover:not(.disabled__4d064) {
-  background-color: var(--darkplus-bg2);
-  color: var(--darkplus-sec);
-}
-.messageContainer_ddb5b4 {
-  background-color: var(--darkplus-bg2);
-}
-
-
-
-
-
-
-
-.theme-dark .messageContent_c19a55:empty {
-  display: none !important;
-}
-
-.theme-dark .newMessagesBar_cf58b5 {
-  background-color: var(--sigma);
-}
-
-.theme-dark .messageGroupWrapper_ac90a2 .messageGroupCozy_ac90a2 {
-  background-color: var(--sigma);
-}
-
-.theme-dark .messages_c06487 {
-  background-color: var(--sigma);
-}
-.theme-dark .channelHeader_f3978e {
-  background-color: var(--sigma);
-}
-.theme-dark .tertiary_ad6d80 {
-  background-color: var(--sigma);
-  color: var(--darkplus-sec);
-}
-.theme-dark .tertiary_ad6d80:hover:not(.disabled__4d064) {
-  background-color: var(--sigma);
-  color: var(--darkplus-sec);
-}
-.theme-dark .tutorialIcon_f1c3d9 {
-  background-color: var(--sigma);
-  color: var(--darkplus-sec);
-}
-.theme-dark .secondary__45d4f {
-  background-color: var(--sigma);
-  color: var(--darkplus-sec);
-}
-.theme-dark .secondary__45d4f:hover:not(.disabled__4d064) {
-  background-color: var(--sigma);
-  color: var(--darkplus-sec);
-}
-.theme-dark .messageContainer_ddb5b4 {
-  background-color: var(--sigma);
-}
-
-
-[data-is-self="true"] .content__235ca {
-  color: white !important;
-}
-
-[data-is-self="true"] .content__235ca a {
-  color: white !important;
-}
-
-.scrollableContainer__74017 {
-    background: var(--textbox-bg-high);
-    border: 1px solid var(--textbox-border);
-    padding: 0;
-    border-radius: var(--rounded);
-    font-size: var(--font-size-sm);
-    box-sizing: border-box;
-    border-bottom-color: #357bf7;
-    transition: none;
-}
-
-.sidebarListRounded_c48ade, .sidebarListRounded_c48ade {
-	border-radius: 0px !important;
-}
-
-.chatContent_f75fb0, .chat_f75fb0 {
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-    url('https://google.com/') !important;
-  background-size: cover;
-  background-position: center;
-}
-
-
-.nowPlayingColumn__133bf {
+[href="/store"],
+[href="/shop"],
+[aria-label="Text icon"],
+[aria-label="Inbox"],
+[aria-label="Open Quick Switcher"],
+[aria-label="Submit a Bug Report"] {
 	display: none !important;
 }
 
-.peopleListItem_cc6179 {
+
+/* No activity section */
+
+._133bf5eea8e33a34-nowPlayingColumn {
+	display: none !important;
+}
+
+.cc61794aab086a2e-peopleListItem {
 	padding-top: 54px !important;
 	padding-bottom: 54px !important;
 }
 
-.sidebar_c48ade:after {
-	height: 0px !important;
+/* Guild tags in profile REALLY annoy me */
+
+._63ed30c16c7151f2-guildTagContainer {
 	display: none !important;
 }
 
-.peopleList__5ec2f {
-	padding-bottom: 50% !important;
+/* ------------ My personal preferences ------------ */
+
+/* Friends and Quests tab on default screen */
+
+[href="/quest-home"],
+[href="/channels/@me"] {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
 }
 
-[role="tree"] {
-	background-color: #e3e5e8 !important;
+/* Channels thick */
+
+._2ea32c412048f708-linkTop {
+	padding-top: 14px !important;
+	padding-bottom: 14px !important;
 }
 
-/* ----- do we really need tags? ----- */
+/* ------------ Message Bubbles ------------ */
 
-.chipletContainerInner__10651, 
-.chipletContainerInine__10651,
-.clickable__10651, 
-.clanTagChiplet_c19a55 {
-  display: none !important;
-}
-
-/* no inbox */
-
-[aria-label="Inbox"],
-[aria-label="Open Quick Switcher"],
-[aria-label="Submit a Bug Report"] {
-  display: none !important;
-}
-
-
-/* activity tab */
-
-.standaloneContainer__7d20c {
-  width: 97% !important;
-  max-width: 97% !important;
-}
-
-
-/* uh idk */
-
-.title_c38106 {
-  display: none !important;
-}
-
-
-/* completely forgot dark mode users existed oops */
-
-.theme-dark .chatContent_f75fb0, .chat_f75fb0 {
-  background: #000 !important;
-}
-
-.theme-dark [role=tree] {
-  background-color: #121212 !important;
-}
-
-.theme-dark .contents_c19a55 .messageContent_c19a55 {
-  background-color: #343434 !important;
-}
