@@ -12,6 +12,5 @@ As I ~~stop procrastinating~~ be more active, I will hopefully separate this rep
 
 
 ```diff
-- f.theme.css is VERY broken right now to some Discord update. will remove this when fixed.
-+ OldProfile.theme.css is mostly fixed as of right now, however there is an ongoing problem with Notes
+- f.theme.css is being rebuilt from ground up.
 ```
