@@ -15,9 +15,6 @@
 }
 
 
-.f5f93a5c4078d63c-descriptionClamp {
-	padding-bottom: 10px;
-}
 
 /* Body 1 */
 
@@ -29,9 +26,16 @@
 	position: relative;
 	max-height: 2000px;
 	overflow-x: hidden;
-	overflow-y: auto;
-	margin-bottom: 80px;
+	overflow-y: auto;	
 }
+
+/* No extra spacing if have role */
+
+:root:not(:has([aria-label="Roles"])) .f5f93a5c4078d63c-descriptionClamp {
+  margin-bottom: 40px;
+}
+
+
 .f5f93a5c4078d63c-descriptionClamp::-webkit-scrollbar-thumb {
 	background: transparent;
 	border-radius: 99px;
@@ -92,14 +96,12 @@
     overflow: visible !important;
 }
 
-.root_fccfdf {
-    margin-bottom: 50px;
-}
+
 
 /* Roles */
+/* oh that was an easy fix */
 
-
-.root_fccfdf:before {
+[aria-label="Roles"]:before {
 	content: "ROLES";
 	font-size: 13px;
 	color: var(--header-secondary);
@@ -107,6 +109,10 @@
 	font-family: var(--font-display);
 	margin-right: 200px;
 	margin-bottom: 4px;
+}
+
+[aria-label="Roles"] {
+	margin-bottom: 50px !important;
 }
 
 
@@ -294,3 +300,4 @@
 [aria-label="Game Collection"] {
   display: none !important;
 }
+
