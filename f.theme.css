@@ -72,6 +72,10 @@
 	display: none !important;
 }
 
+[data-has-border="true"] {
+	border-top: none !important;
+}
+
 /* ------------ My personal preferences ------------ */
 /* Basically thicker stuff */
 /* Friends and Quests tab on default screen */
@@ -95,6 +99,8 @@
 }
 
 /* ------------ No user area ------------ */
+/* Even though the "top/bottom: 0px" seemingly have no effect they actually do somehow */
+
 
 [aria-label="User area"] {
 	border-radius: 0px !important;
@@ -102,6 +108,7 @@
 	width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 21px) !important;
 	background: var(--background-gradient-high, var(--background-base-lowest)) !important;
 	left: 82px !important;
+	bottom: 0px !important;
 }
 
 ._37e49614b9f110a9-container {
@@ -110,7 +117,7 @@
 
 /* ------------ No top bar? ------------ */
 /* Only macOS (15.7.2/Sequoia) tested */
-/* Tweak the right: 120px as needed, depending on the amount of top-bar icons you have */
+/* Tweak the "right: 120px" as needed, depending on the amount of top-bar icons you have */
 
 .c38106a3f0c3ca76-trailing { /* top bar icons */
 	z-index: 101 !important;
@@ -122,13 +129,21 @@
 	position: relative !important;
 }
 
-._5e434347c823b592-sidebarList,
-._5e434347c823b592-page {
+/* I did some ... really weird stuff */
+
+._5e434347c823b592-page,
+._5e434347c823b592-sidebarList {
 	height: 100vh !important;
+	top: 0px !important;
+	position: relative !important;
+}
+
+._5e434347c823b592-content {
+	height: 200vh !important;
 	top: -40px !important;
 	position: relative !important;
 }
 
-.c38106a3f0c3ca76-title {
-	z-index: -1 !important;
+[aria-label="Servers sidebar"] {
+	top: 40px !important;
 }
