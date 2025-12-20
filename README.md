@@ -15,7 +15,7 @@ As I ~~stop procrastinating~~ be more active, I will hopefully separate this rep
 - f.theme.css is being rebuilt from ground up.
 ```
 <details>
-  <summary>Image previews</summary>
+  <summary>Image previews (SUBJECT TO CHANGE)</summary>
 Light mode:
 
 ![Light Mode](image/Light.png)
@@ -28,3 +28,15 @@ Dark mode:
 
 ![Dark theme](image/Dark.png)
 </details>
+
+---
+
+Todo for f.theme.css:
+
+| Feature           | Is implemented? |
+| :---------------- | :------: |
+| Remove most Nitro junk |  Yes   |
+| Old User area     | Yes      |
+| Old server list   | Yes (import)   |
+| No titlebar       |  Partial   |
+| Message bubbles   |   No     |
