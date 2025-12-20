@@ -14,3 +14,17 @@ As I ~~stop procrastinating~~ be more active, I will hopefully separate this rep
 ```diff
 - f.theme.css is being rebuilt from ground up.
 ```
+<details>
+  <summary>Image previews</summary>
+Light mode:
+
+![Light Mode](image/Light.png)
+
+Themed mode:
+
+![Purple/Blue theme](image/Themed.png)
+
+Dark mode:
+
+![Dark theme](image/Dark.png)
+</details>
